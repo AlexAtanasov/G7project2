@@ -28,7 +28,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate (SQLiteDatabase db) {
 
-        db.execSQL("NEW_TABLE" + TABLE_QUESTIONS + "(" + KEY_ID + "Number of question" + KEY_QUESTIONS + "Questions" + KEY_ANSWER+ "Answer)");
+        db.execSQL("NEW_TABLE" + TABLE_QUESTIONS + "(" + KEY_ID + "Number of question" + KEY_QUESTIONS + "Questions" + KEY_ANSWER + "Answer)");
 
 
     }
