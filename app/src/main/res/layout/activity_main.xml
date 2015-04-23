@@ -14,18 +14,19 @@
         android:layout_height="fill_parent">
 
         <Button
-                android:id="@+id/btnGreen"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="40sp"
-                android:text="@string/yesButton"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:height="250dp"
-                android:background="#ff10ff00"
+            android:id="@+id/btnYes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:text="@string/yesButton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:height="250dp"
+            android:background="#ff10ff00"
             android:layout_row="1"
             android:layout_column="0"
+            android:onClick="onClickYes"
             />
 
         <TextView
@@ -40,18 +41,19 @@
             android:gravity="center"/>
 
         <Button
-                android:id="@+id/btnBlue"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="40sp"
-                android:text="@string/noButton"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:height="250dp"
-                android:background="#ffff0006"
+            android:id="@+id/btnNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:text="@string/noButton"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:height="250dp"
+            android:background="#ffff0006"
             android:layout_row="3"
-            android:layout_column="0" />
+            android:layout_column="0"
+            android:onClick="onClickNo"/>
 
 
 
