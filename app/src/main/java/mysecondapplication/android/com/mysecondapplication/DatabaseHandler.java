@@ -12,7 +12,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 1;
 
-    private static final int DATABASE_NAME = 1;
+
 
     private static final String DATABASE_NAME = "dummy_database",
     TABLE_QUESTIONS = "questions",
