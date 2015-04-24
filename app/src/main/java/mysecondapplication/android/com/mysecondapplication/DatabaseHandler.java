@@ -55,12 +55,36 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     private void addQuestions() {
 
-        Question id1  = new Question("Is St James capital of New Zealand", "yes", "no", "no");
+        Question id1  = new Question("Is Stockholm city in Sweden??", "yes", "no", "yes");
         this.insertIntoDb(id1);
-        Question id2  = new Question("Is Boston capital of USA", "yes", "no", "no");
+        Question id2  = new Question("Is Boston capital of USA?", "yes", "no", "no");
         this.insertIntoDb(id2);
-        Question id3  = new Question("Is Ottawa capital of Canada", "yes", "no", "yes");
+        Question id3  = new Question("Is Ottawa capital of Canada?", "yes", "no", "yes");
         this.insertIntoDb(id3);
+        Question id4  = new Question("Is Bern city in France?", "yes", "no", "no");
+        this.insertIntoDb(id4);
+        Question id5  = new Question("Is Barcelona capital of Spain?", "yes", "no", "no");
+        this.insertIntoDb(id5);
+        Question id6  = new Question("Is Astana capital of Kazakhstan?", "yes", "no", "yes");
+        this.insertIntoDb(id6);
+        Question id7  = new Question("Is Dubai capital of UAE?", "yes", "no", "no");
+        this.insertIntoDb(id7);
+        Question id8  = new Question("Is Rio de Janeiro capital of Brazil?", "yes", "no", "no");
+        this.insertIntoDb(id8);
+        Question id9  = new Question("Is Vancouver capital of Canada?", "yes", "no", "no");
+        this.insertIntoDb(id9);
+        Question id10  = new Question("Is Lyon city in France?", "yes", "no", "yes");
+        this.insertIntoDb(id10);
+        Question id11  = new Question("Is Islamabad capital of Pakistan?", "yes", "no", "yes");
+        this.insertIntoDb(id11);
+        Question id12  = new Question("Is Guam part of USA?", "yes", "no", "yes");
+        this.insertIntoDb(id12);
+        Question id13  = new Question("Is Minsk capital of Ukraine?", "yes", "no", "no");
+        this.insertIntoDb(id13);
+        Question id14  = new Question("Is Istanbul capital of Turkey?", "yes", "no", "no");
+        this.insertIntoDb(id14);
+        Question id15  = new Question("Is Sofia capital of Bulgaria?", "yes", "no", "yes");
+        this.insertIntoDb(id15);
 
   }
 
