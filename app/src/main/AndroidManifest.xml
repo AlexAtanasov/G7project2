@@ -32,6 +32,10 @@
             android:name=".Wrong"
             android:label="@string/title_activity_wrong" >
         </activity>
+        <activity
+            android:name=".StartMenuAct"
+            android:label="@string/title_activity_start_menu" >
+        </activity>
     </application>
 
 </manifest>

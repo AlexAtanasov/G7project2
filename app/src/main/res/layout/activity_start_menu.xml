@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:paddingLeft="1dp"
+    android:paddingRight="1dp"
+    android:paddingTop="1dp"
+    android:paddingBottom="1dp"
+
+    tools:context="mysecondapplication.android.com.mysecondapplication.StartMenuAct"
+    android:background="#ff0d007e">
+
+
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:id="@+id/imageView"
+        android:layout_row="0"
+        android:layout_column="10"
+        android:scaleType="fitCenter"
+        android:src="@drawable/titlemenu"
+
+        android:focusableInTouchMode="false"
+        android:background="#ffc2c2c2" />
+
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_row="10"
+        android:layout_column="11"
+        android:id="@+id/gridLayout2"
+        android:layout_below="@+id/imageView">
+
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="119dp"
+            android:id="@+id/editText"
+            android:layout_row="2"
+            android:layout_column="11"
+            android:autoText="false"
+            android:textColor="#ffffffff"
+            android:text="THIS IS WHERE AGA WILL BE DISPLAYED" />
+
+        <GridLayout
+            android:layout_width="fill_parent"
+            android:layout_height="135dp"
+            android:layout_row="0"
+            android:layout_column="11"
+            android:layout_rowSpan="2">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:text="TEXT TO SPEECH"
+                android:id="@+id/button"
+                android:layout_row="0"
+                android:layout_column="11"
+                android:textSize="25dp"
+                android:background="#FF6069FF"
+                android:textColor="#ffffffff" />
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="fill_parent"
+            android:layout_height="135dp"
+            android:layout_row="4"
+            android:layout_column="11">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="TEXT ONLY"
+                android:id="@+id/button2"
+                android:layout_row="4"
+                android:layout_column="11"
+                android:textSize="25dp"
+                android:background="#ff6069ff"
+                android:textColor="#ffffffff" />
+        </GridLayout>
+    </GridLayout>
+
+</RelativeLayout>
+

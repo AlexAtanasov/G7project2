@@ -11,5 +11,6 @@
     <string name="title_activity_correct">CorrectActivity</string>
     <string name="title_activity_activity_wrong">ActivityWrong</string>
     <string name="title_activity_wrong">Wrong</string>
+    <string name="title_activity_start_menu">StartMenuAct</string>
 
 </resources>
