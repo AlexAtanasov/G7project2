@@ -3,13 +3,11 @@ package mysecondapplication.android.com.mysecondapplication;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.os.Handler;
 
 
 
-public class ActivityWrong extends Activity {
+public class WrongActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
