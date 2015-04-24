@@ -6,11 +6,15 @@
     <string name="yesButton">Yes</string>
     <string name="noButton">No</string>
     <string name="QuestingString">Is Stockholm a city in Sweden?</string>
-    <string name="title_activity_answer">AnswerActivity</string>
-    <string name="hello_world">Hello world!</string>
     <string name="title_activity_correct">CorrectActivity</string>
+<<<<<<< HEAD
     <string name="title_activity_activity_wrong">ActivityWrong</string>
     <string name="title_activity_wrong">Wrong</string>
     <string name="title_activity_start_menu">StartMenuAct</string>
+=======
+    <string name="title_activity_wrong">ActivityWrong</string>
+    <string name="title_aga">AGA</string>
+
+>>>>>>> b90cfbc20512b93e0f2b611bf7a056758a11d948
 
 </resources>

@@ -34,16 +34,6 @@ public class Question {
 
     }
 
-
-
-
-
-
-
-
-
-
-
     public int getId() {
 
         return id;
@@ -62,12 +52,51 @@ public class Question {
         return QUESTION;
     }
 
+    public String getOption_yes(){
+
+        return option_yes;
+
+    }
+
+    public String getOption_no() {
+
+        return option_no;
+
+    }
+
+    public String getAnswer() {
+
+        return answer;
+
+    }
 
     public void setQuestion (String question) {
 
-        this.QUESTION = question;
+        QUESTION = question;
 
     }
+
+    public void setOption_yes (String Option_yes) {
+
+        option_yes = Option_yes;
+
+    }
+
+
+    public void setOption_no (String Option_no) {
+
+        option_no = Option_no;
+
+    }
+
+    public void setAnswer (String Answer) {
+
+        answer = Answer;
+
+    }
+
+
+
 
     public String toString () {
         return QUESTION;

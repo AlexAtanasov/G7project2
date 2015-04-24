@@ -1,5 +1,6 @@
 package mysecondapplication.android.com.mysecondapplication;
 
+import android.app.Activity;
 import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -18,7 +19,7 @@ import com.swedspot.vil.policy.AutomotiveCertificate;
 /**
  * Created by Viktor on 2015-04-22.
  */
-public class AGA extends ActionBarActivity {
+public class AGA extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
