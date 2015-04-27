@@ -27,14 +27,12 @@
             android:name=".WrongActivity"
             android:label="@string/title_activity_wrong" >
         </activity>
-<<<<<<< HEAD
+
         <activity
             android:name=".StartMenuAct"
             android:label="@string/title_activity_start_menu" >
         </activity>
-=======
 
->>>>>>> b90cfbc20512b93e0f2b611bf7a056758a11d948
     </application>
 
 </manifest>

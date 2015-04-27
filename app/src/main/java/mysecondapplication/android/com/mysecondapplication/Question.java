@@ -24,12 +24,13 @@ public class Question {
 
     }
 
-    public Question(String Question, String Option_yes, String Option_no, String Answer) {
+    public Question(String Question, String Answer, String Option_yes, String Option_no) {
 
         QUESTION = Question;
+        answer = Answer;
         option_yes = Option_yes;
         option_no = Option_no;
-        answer = Answer;
+
 
 
     }
