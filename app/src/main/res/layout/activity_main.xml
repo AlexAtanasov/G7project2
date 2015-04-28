@@ -14,7 +14,8 @@
     tools:context=".MainActivity"
     android:background="#ff000000">
 
-    <GridLayout
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
@@ -24,21 +25,16 @@
             android:layout_height="wrap_content"
             android:textSize="40sp"
             android:text="@string/yesButton"
-            android:height="250dp"
+            android:height="240dp"
             android:background="#ff10ff00"
-            android:layout_row="1"
-            android:layout_column="0"
             android:onClick="onClickYes"
             />
 
         <TextView
             android:id="@+id/textView"
-            android:text="Large Text"
             android:layout_width="match_parent"
             android:layout_height="64dp"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_row="3"
-            android:layout_column="0"
             android:textColor="#fffcffe3"
             android:gravity="center"/>
 
@@ -48,10 +44,7 @@
             class="mysecondapplication.android.com.mysecondapplication.Aga_Fragment"
             android:id="@+id/fragment"
             tools:layout="@layout/activity_aga"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_row="4"
-            android:layout_column="0" />
+             />
 
         <Button
             android:id="@+id/btnNo"
@@ -59,19 +52,10 @@
             android:layout_height="wrap_content"
             android:textSize="40sp"
             android:text="@string/noButton"
-            android:height="250dp"
+            android:height="240dp"
             android:background="#ffff0006"
-            android:layout_row="5"
-            android:layout_column="0"
             android:onClick="onClickNo"/>
-
-
-    </GridLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"></LinearLayout>
+    </LinearLayout>
 
 </RelativeLayout>
 
