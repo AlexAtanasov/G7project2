@@ -38,7 +38,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 +KEY_OPTB +" TEXT)";
         db.execSQL(sql);
         addQuestions();
-        //db.close();
+
     }
 
 
@@ -116,6 +116,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             } while (cursor.moveToNext());
         }
         // return quest list
+
         return quesList;
     }
     public int rowcount()

@@ -10,12 +10,10 @@ import android.os.Handler;
 
 
 public class CorrectActivity extends Activity {
-    MainActivity act = new MainActivity();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_correct);
-
 
         new Handler().postDelayed(new Runnable() {
             @Override

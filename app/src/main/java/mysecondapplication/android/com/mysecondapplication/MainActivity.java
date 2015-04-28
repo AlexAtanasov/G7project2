@@ -12,8 +12,8 @@ package mysecondapplication.android.com.mysecondapplication;
 
 public class MainActivity extends ActionBarActivity {
     List<Question> quesList;
-    int score=0;
-    int qid=0;
+    int score = 0;
+    int qid = 0;
     Question currentQ;
     TextView txtQuestion;
 
@@ -21,12 +21,11 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        DatabaseHandler db=new DatabaseHandler(this);
+        DatabaseHandler db = new DatabaseHandler(this);
         quesList=db.getAllQuestions();
         currentQ=quesList.get(qid);
         txtQuestion=(TextView)findViewById(R.id.textView);
         setQuestionView();
-
     }
 
     public void onClickYes(View view) {
@@ -34,6 +33,7 @@ public class MainActivity extends ActionBarActivity {
         startActivity(intent);
         currentQ = quesList.get(qid);
         setQuestionView();
+
     }
 
     public void onClickNo(View view){
@@ -41,10 +41,13 @@ public class MainActivity extends ActionBarActivity {
         startActivity(intent);
         currentQ = quesList.get(qid);
         setQuestionView();
+
     }
-    private void setQuestionView()
+    public void setQuestionView()
     {
+
         txtQuestion.setText(currentQ.getQuestion());
+
         qid++;
     }
 }
