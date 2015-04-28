@@ -11,6 +11,7 @@ import android.widget.Button;
 public class TtSmain extends Activity {
     private Button button;
     TxtS ttsp = null;
+    MainActivity act;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

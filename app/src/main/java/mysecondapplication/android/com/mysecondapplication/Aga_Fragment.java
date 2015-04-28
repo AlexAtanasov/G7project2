@@ -1,9 +1,8 @@
 package mysecondapplication.android.com.mysecondapplication;
 
-import android.app.Activity;
 import android.os.AsyncTask;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.swedspot.automotiveapi.AutomotiveSignal;
 import android.swedspot.automotiveapi.AutomotiveSignalId;
 import android.swedspot.scs.data.SCSFloat;
@@ -16,16 +15,27 @@ import com.swedspot.vil.distraction.DriverDistractionListener;
 import com.swedspot.vil.distraction.LightMode;
 import com.swedspot.vil.distraction.StealthMode;
 import com.swedspot.vil.policy.AutomotiveCertificate;
+import android.view.View;
+import android.view.ViewGroup;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import java.lang.Object;
+import java.lang.Override;
+import java.lang.Runnable;
+import java.lang.String;
+
+
+
 /**
- * Created by Viktor on 2015-04-22.
+ * Created by Viktor on 2015-04-24.
  */
-public class AGA extends Activity {
+public class Aga_Fragment extends Fragment {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        final TextView ds = (TextView) findViewById(R.id.displaySpeed);
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.activity_aga, container, false);
+
+        final TextView ds = (TextView) view.findViewById(R.id.displaySpeed);
 
         AsyncTask async = new AsyncTask() {
 
@@ -35,14 +45,16 @@ public class AGA extends Activity {
                         new AutomotiveListener() {
                             @Override
                             public void receive(final AutomotiveSignal automotiveSignal) {
-                                ds.post(new Runnable() { // Post the result back to the View/UI thread
+                                if (automotiveSignal.getSignalId() == AutomotiveSignalId.FMS_WHEEL_BASED_SPEED) {
+                                    ds.post(new Runnable() { // Post the result back to the View/UI thread
 
-                                    public void run() {
-                                        ds.setText(String.format("%.1f km/h", ((SCSFloat) automotiveSignal.getData()).getFloatValue()));
-                                    }
-                                });
-                            }
-                            @Override
+                                        public void run() {
+                                            ds.setText(String.format("%.1f km/h", ((SCSFloat) automotiveSignal.getData()).getFloatValue()));
+                                        }
+                                    });
+                                }
+                        }
+                @Override
                             public void timeout(int i) {
                             }
 
@@ -75,5 +87,7 @@ public class AGA extends Activity {
                 return null;
             }};
         async.execute();
-    };
+        return view;
+    }
 }
+
