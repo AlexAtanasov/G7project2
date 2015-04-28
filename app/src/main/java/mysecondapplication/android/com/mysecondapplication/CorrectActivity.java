@@ -3,12 +3,13 @@ package mysecondapplication.android.com.mysecondapplication;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-
 import android.os.Handler;
 
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> effde1640110a71775475570ba927a3d4ae1b958
 public class CorrectActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
