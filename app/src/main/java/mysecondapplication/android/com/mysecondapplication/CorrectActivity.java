@@ -7,7 +7,10 @@ import android.view.View;
 
 import android.os.Handler;
 
+
+
 public class CorrectActivity extends Activity {
+    MainActivity act = new MainActivity();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +23,7 @@ public class CorrectActivity extends Activity {
             delayReturn();
             }
         }, 3000);
+
 
     }
 
