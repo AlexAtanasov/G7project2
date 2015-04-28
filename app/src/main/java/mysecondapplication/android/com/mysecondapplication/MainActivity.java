@@ -3,13 +3,14 @@ package mysecondapplication.android.com.mysecondapplication;
         import android.app.Activity;
         import android.content.Intent;
         import android.os.Bundle;
+        import android.support.v7.app.ActionBarActivity;
         import android.view.View;
         import android.widget.TextView;
 
         import java.util.List;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends ActionBarActivity {
     List<Question> quesList;
     int score=0;
     int qid=0;
