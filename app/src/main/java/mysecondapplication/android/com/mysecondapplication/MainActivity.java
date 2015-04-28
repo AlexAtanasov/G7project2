@@ -16,6 +16,7 @@ public class MainActivity extends ActionBarActivity {
     Question currentQ;
     TextView txtQuestion;
 
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -24,16 +25,21 @@ public class MainActivity extends ActionBarActivity {
         currentQ=quesList.get(qid);
         txtQuestion=(TextView)findViewById(R.id.questionText);
         setQuestionView();
+
     }
 
     public void onClickYes(View view) {
         Intent intent = new Intent(this, CorrectActivity.class);
         startActivity(intent);
+        currentQ = quesList.get(qid);
+        setQuestionView();
     }
 
     public void onClickNo(View view){
         Intent intent = new Intent (this, WrongActivity.class);
         startActivity(intent);
+        currentQ = quesList.get(qid);
+        setQuestionView();
     }
     private void setQuestionView()
     {

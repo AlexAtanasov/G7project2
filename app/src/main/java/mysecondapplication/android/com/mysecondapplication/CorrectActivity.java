@@ -6,7 +6,12 @@ import android.os.Bundle;
 import android.os.Handler;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> effde1640110a71775475570ba927a3d4ae1b958
 public class CorrectActivity extends Activity {
+    MainActivity act = new MainActivity();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +24,7 @@ public class CorrectActivity extends Activity {
             delayReturn();
             }
         }, 3000);
+
 
     }
 

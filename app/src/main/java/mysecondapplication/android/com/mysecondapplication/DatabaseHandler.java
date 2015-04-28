@@ -41,6 +41,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         //db.close();
     }
 
+
+
     private void addQuestions() {
 
         Question id1  = new Question("Is Stockholm a city in Sweden", "yes", "yes", "no");
