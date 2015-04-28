@@ -1,6 +1,5 @@
 package mysecondapplication.android.com.mysecondapplication;
 
-        import android.app.Activity;
         import android.content.Intent;
         import android.os.Bundle;
         import android.support.v7.app.ActionBarActivity;
@@ -23,7 +22,7 @@ public class MainActivity extends ActionBarActivity {
         DatabaseHandler db=new DatabaseHandler(this);
         quesList=db.getAllQuestions();
         currentQ=quesList.get(qid);
-        txtQuestion=(TextView)findViewById(R.id.textView);
+        txtQuestion=(TextView)findViewById(R.id.questionText);
         setQuestionView();
     }
 

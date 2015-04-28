@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.os.Handler;
 
 
-
 public class WrongActivity extends Activity {
 
     @Override
