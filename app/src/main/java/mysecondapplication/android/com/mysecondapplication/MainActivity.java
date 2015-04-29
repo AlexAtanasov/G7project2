@@ -5,6 +5,7 @@ package mysecondapplication.android.com.mysecondapplication;
         import android.support.v7.app.ActionBarActivity;
         import android.view.View;
         import android.widget.TextView;
+        import android.widget.Toast;
 
         import java.util.List;
 
@@ -30,13 +31,47 @@ public class MainActivity extends ActionBarActivity {
     public void onClickYes(View view) {
      //   Intent intent = new Intent(this, CorrectActivity.class);
       //  startActivity(intent);
+
+        if(currentQ.getAnswer().equals("yes")) {
+
+            Toast.makeText(getApplicationContext(),
+                    "Correct!",
+                    Toast.LENGTH_SHORT)
+                    .show();
+            score++;
+
+        } else {
+            Toast.makeText(getApplicationContext(),
+                    "Sorry! Better luck next time.",
+                    Toast.LENGTH_SHORT)
+                    .show();
+        }
+
         currentQ = quesList.get(qid);
         setQuestionView();
 
     }
 
     public void onClickNo(View view){
-      //  Intent intent = new Intent (this, WrongActivity.class);
+
+
+        if(currentQ.getAnswer().equals("no")) {
+
+            Toast.makeText(getApplicationContext(),
+                    "Correct!",
+                    Toast.LENGTH_SHORT)
+                    .show();
+            score++;
+
+        } else {
+            Toast.makeText(getApplicationContext(),
+                    "Sorry! Better luck next time.",
+                    Toast.LENGTH_SHORT)
+                    .show();
+        }
+
+
+        //  Intent intent = new Intent (this, WrongActivity.class);
        //  startActivity(intent);
         currentQ = quesList.get(qid);
         setQuestionView();
