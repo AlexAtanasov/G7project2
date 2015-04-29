@@ -9,6 +9,7 @@ import android.content.ContentValues;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
@@ -113,8 +114,12 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 quest.setOption_no(cursor.getString(4));
 
                 quesList.add(quest);
+
+
             } while (cursor.moveToNext());
         }
+        Collections.shuffle(quesList);
+
         // return quest list
 
         return quesList;

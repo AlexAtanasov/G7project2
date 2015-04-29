@@ -28,16 +28,16 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void onClickYes(View view) {
-        Intent intent = new Intent(this, CorrectActivity.class);
-        startActivity(intent);
+     //   Intent intent = new Intent(this, CorrectActivity.class);
+      //  startActivity(intent);
         currentQ = quesList.get(qid);
         setQuestionView();
 
     }
 
     public void onClickNo(View view){
-        Intent intent = new Intent (this, WrongActivity.class);
-        startActivity(intent);
+      //  Intent intent = new Intent (this, WrongActivity.class);
+       //  startActivity(intent);
         currentQ = quesList.get(qid);
         setQuestionView();
 
