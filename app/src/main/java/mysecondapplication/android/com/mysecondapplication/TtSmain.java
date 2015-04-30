@@ -28,7 +28,7 @@ public class TtSmain extends Activity {
                 String myText1 = "Good morning!";
                 String myText2 = "The weather today sucks!";
                 ttsp.initText(myText1);
-                ttsp.addText(myText2);
+               // ttsp.addText(myText2);
             }
         });
 

@@ -15,7 +15,7 @@ import java.util.List;
 public class DatabaseHandler extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
     // Database Name
-    private static final String DATABASE_NAME = "triviaQuiz";
+    private static final String DATABASE_NAME = "QUESTION";
     // tasks table name
     private static final String TABLE_QUEST = "quest";
     // tasks Table Columns names

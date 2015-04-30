@@ -16,16 +16,25 @@ public class MainActivity extends ActionBarActivity {
     int qid = 0;
     Question currentQ;
     TextView txtQuestion;
-
+    TxtS ttsp = null;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
         DatabaseHandler db = new DatabaseHandler(this);
         quesList=db.getAllQuestions();
         currentQ=quesList.get(qid);
         txtQuestion=(TextView)findViewById(R.id.questionText);
         setQuestionView();
+
+        ttsp = new TxtS();
+        ttsp.initialize(this);
+        ttsp.initText(currentQ.toString());
+
+
     }
 
     public void onClickYes(View view) {
@@ -38,6 +47,8 @@ public class MainActivity extends ActionBarActivity {
                     "Correct!",
                     Toast.LENGTH_SHORT)
                     .show();
+            String cor = "Correct!";
+            ttsp.initText(cor);
             score++;
 
         } else {
@@ -45,6 +56,8 @@ public class MainActivity extends ActionBarActivity {
                     "Sorry! Better luck next time.",
                     Toast.LENGTH_SHORT)
                     .show();
+            String wro = "Incorrect!";
+            ttsp.initText(wro);
         }
 
         currentQ = quesList.get(qid);
@@ -61,6 +74,8 @@ public class MainActivity extends ActionBarActivity {
                     "Correct!",
                     Toast.LENGTH_SHORT)
                     .show();
+            String cor = "Correct!";
+            ttsp.initText(cor);
             score++;
 
         } else {
@@ -68,6 +83,8 @@ public class MainActivity extends ActionBarActivity {
                     "Sorry! Better luck next time.",
                     Toast.LENGTH_SHORT)
                     .show();
+            String wro = "Incorrect!";
+            ttsp.initText(wro);
         }
 
 
