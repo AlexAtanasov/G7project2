@@ -1,5 +1,7 @@
+
 package mysecondapplication.android.com.mysecondapplication;
 
+import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -29,7 +31,10 @@ import java.lang.String;
 /**
  * Created by Viktor on 2015-04-24.
  */
-public class Aga_Fragment extends Fragment {
+public class AgaFragment extends Fragment {
+
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

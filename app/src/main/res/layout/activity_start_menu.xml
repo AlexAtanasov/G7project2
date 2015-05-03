@@ -1,6 +1,8 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_container"
+
     android:layout_width="match_parent"
 
     android:layout_height="match_parent"
@@ -29,15 +31,15 @@
         android:layout_below="@+id/imageView">
 
 
-        <EditText
+        <TextView
+            android:id="@+id/displaySpeed"
             android:layout_width="fill_parent"
             android:layout_height="119dp"
-            android:id="@+id/editText"
             android:layout_row="2"
             android:layout_column="11"
             android:autoText="false"
             android:textColor="#ffffffff"
-            android:text="THIS IS WHERE AGA WILL BE DISPLAYED" />
+             />
 
         <GridLayout
             android:layout_width="fill_parent"
@@ -55,7 +57,8 @@
                 android:layout_column="11"
                 android:textSize="25dp"
                 android:background="#FF6069FF"
-                android:textColor="#ffffffff" />
+                android:textColor="#ffffffff"
+                android:onClick="onClickTextToSpeech"/>
         </GridLayout>
 
         <GridLayout
@@ -73,7 +76,8 @@
                 android:layout_column="11"
                 android:textSize="25dp"
                 android:background="#ff6069ff"
-                android:textColor="#ffffffff" />
+                android:textColor="#ffffffff"
+                android:onClick="onClickTextOnly"/>
         </GridLayout>
     </GridLayout>
 </RelativeLayout>
