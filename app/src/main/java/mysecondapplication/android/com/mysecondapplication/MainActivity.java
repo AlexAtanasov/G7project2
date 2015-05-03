@@ -32,7 +32,8 @@ public class MainActivity extends ActionBarActivity {
 
         ttsp = new TxtS();
         ttsp.initialize(this);
-        ttsp.initText(currentQ.toString());
+
+        ttsp.initText("hello");
 
 
     }
