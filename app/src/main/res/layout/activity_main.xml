@@ -34,13 +34,7 @@
         android:gravity="center"
         android:layout_below="@+id/btnYes"/>
 
-    <fragment
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        class="mysecondapplication.android.com.mysecondapplication.Aga_Fragment"
-        android:id="@+id/fragment"
-        tools:layout="@layout/activity_aga"
-        android:layout_below="@+id/questionText"/>
+
 
     <Button
         android:id="@+id/btnNo"
@@ -51,7 +45,10 @@
         android:height="220dp"
         android:background="#ffff0006"
         android:onClick="onClickNo"
-        android:layout_below="@+id/fragment"/>
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/questionText"/>
 
 </RelativeLayout>
 

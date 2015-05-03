@@ -5,11 +5,19 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:weightSum="1"
-    android:gravity="center_horizontal">
+    android:paddingTop="300dp"
+    android:id="@+id/background">
+
+
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Display Speed Here"
-        android:id="@+id/displaySpeed" />
+        android:id="@+id/displaySpeed"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.06"
+        android:textColor="#ffffffff"
+        android:textSize="33sp"/>
 </LinearLayout>

@@ -46,7 +46,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     private void addQuestions() {
 
-        Question id1  = new Question("Is Stockholm a city in Sweden", "yes", "yes", "no");
+        Question id1  = new Question("Is Stockholm a city in Sweden?", "yes", "yes", "no");
         this.insertIntoDb(id1);
         Question id2  = new Question("Is Boston capital of USA?", "no", "yes", "no");
         this.insertIntoDb(id2);
@@ -64,7 +64,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         this.insertIntoDb(id8);
         Question id9  = new Question("Is Vancouver capital of Canada?", "no", "yes", "no");
         this.insertIntoDb(id9);
-        Question id10  = new Question("Is Lyon city in France?", "no", "yes", "no");
+        Question id10  = new Question("Is Lyon city in France?", "yes", "yes", "no");
         this.insertIntoDb(id10);
         Question id11  = new Question("Is Islamabad capital of Pakistan?", "yes", "yes", "no");
         this.insertIntoDb(id11);

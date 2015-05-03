@@ -1,9 +1,13 @@
 package mysecondapplication.android.com.mysecondapplication;
 
+        import android.content.Context;
         import android.content.Intent;
         import android.os.Bundle;
         import android.support.v7.app.ActionBarActivity;
+        import android.util.Log;
+        import android.view.Gravity;
         import android.view.View;
+        import android.widget.Button;
         import android.widget.TextView;
         import android.widget.Toast;
 
@@ -36,6 +40,8 @@ public class MainActivity extends ActionBarActivity {
         ttsp.initText("hello");
 
 
+
+
     }
 
     public void onClickYes(View view) {
@@ -44,19 +50,33 @@ public class MainActivity extends ActionBarActivity {
 
         if(currentQ.getAnswer().equals("yes")) {
 
-            Toast.makeText(getApplicationContext(),
-                    "Correct!",
-                    Toast.LENGTH_SHORT)
-                    .show();
+            Context context = getApplicationContext();
+            CharSequence text = "yes";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast;
+            toast = Toast.makeText(context,"Correct!", Toast.LENGTH_SHORT);
+            toast.show();
+            score++;
+
+            toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.START, 370, 95);
+
             String cor = "Correct!";
             ttsp.initText(cor);
             score++;
 
         } else {
-            Toast.makeText(getApplicationContext(),
-                    "Sorry! Better luck next time.",
-                    Toast.LENGTH_SHORT)
-                    .show();
+            Context context = getApplicationContext();
+            CharSequence text = "yes";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast;
+            toast = Toast.makeText(context,"Incorrect!", Toast.LENGTH_SHORT);
+            toast.show();
+            score++;
+
+            toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.START, 370, 95);
+
             String wro = "Incorrect!";
             ttsp.initText(wro);
         }
@@ -71,19 +91,33 @@ public class MainActivity extends ActionBarActivity {
 
         if(currentQ.getAnswer().equals("no")) {
 
-            Toast.makeText(getApplicationContext(),
-                    "Correct!",
-                    Toast.LENGTH_SHORT)
-                    .show();
+            Context context = getApplicationContext();
+            CharSequence text = "no";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast;
+            toast = Toast.makeText(context,"Correct!", Toast.LENGTH_SHORT);
+            toast.show();
+            score++;
+
+            toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.START, 370, 95);
+
             String cor = "Correct!";
             ttsp.initText(cor);
             score++;
 
         } else {
-            Toast.makeText(getApplicationContext(),
-                    "Sorry! Better luck next time.",
-                    Toast.LENGTH_SHORT)
-                    .show();
+            Context context = getApplicationContext();
+            CharSequence text = "yes";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast;
+            toast = Toast.makeText(context,"Incorrect!", Toast.LENGTH_SHORT);
+            toast.show();
+            score++;
+
+            toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.START, 370, 95);
+
             String wro = "Incorrect!";
             ttsp.initText(wro);
         }
