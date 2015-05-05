@@ -29,6 +29,10 @@ public class MainActivity extends ActionBarActivity {
 
         Handler h = new Handler();
 
+        ttsp = new TxtS();
+
+        ttsp.initialize(this);
+
         DatabaseHandler db = new DatabaseHandler(this);
         quesList=db.getAllQuestions();
         currentQ=quesList.get(qid);
@@ -36,15 +40,13 @@ public class MainActivity extends ActionBarActivity {
 
         setQuestionView();
 
-        ttsp = new TxtS();
 
-        ttsp.initialize(this);
 
         h.postDelayed(new Runnable() {
             @Override
             public void run() {
 
-                ttsp.initText(currentQ.toSuck());
+                ttsp.addText(currentQ.toSuck());
             }
         }, 400);
 
