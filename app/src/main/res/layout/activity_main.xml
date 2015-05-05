@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:textSize="40sp"
         android:text="@string/yesButton"
-        android:height="220dp"
+        android:height="190dp"
         android:background="#ff10ff00"
         android:onClick="onClickYes"/>
 
@@ -32,9 +32,21 @@
         android:textColor="#fffcffe3"
         android:text="question"
         android:gravity="center"
-        android:layout_below="@+id/btnYes"/>
+        android:layout_below="@+id/btnYes"
+        android:visibility="invisible" />
 
 
+    <Button
+        android:id="@+id/btnRep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:text="@string/repButton"
+        android:height="150dp"
+        android:background="#fffdfff8"
+        android:onClick="onClickRepeat"
+        android:layout_below="@+id/btnYes"
+        android:layout_above="@+id/btnNo" />
 
     <Button
         android:id="@+id/btnNo"
@@ -42,13 +54,12 @@
         android:layout_height="wrap_content"
         android:textSize="40sp"
         android:text="@string/noButton"
-        android:height="220dp"
+        android:height="190dp"
         android:background="#ffff0006"
         android:onClick="onClickNo"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/questionText"/>
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
 

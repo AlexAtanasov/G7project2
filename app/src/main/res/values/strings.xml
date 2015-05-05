@@ -4,6 +4,7 @@
     <string name="app_name">MySecondApplication</string>
     <string name="action_settings">Settings</string>
     <string name="yesButton">Yes</string>
+    <string name="repButton">Repeat</string>
     <string name="noButton">No</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_correct">CorrectActivity</string>

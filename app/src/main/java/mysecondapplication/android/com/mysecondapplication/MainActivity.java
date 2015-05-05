@@ -27,11 +27,14 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Handler h = new Handler();
 
         ttsp = new TxtS();
 
         ttsp.initialize(this);
+
+        Handler h = new Handler();
+
+
 
         DatabaseHandler db = new DatabaseHandler(this);
         quesList=db.getAllQuestions();
@@ -92,6 +95,12 @@ public class MainActivity extends ActionBarActivity {
         currentQ = quesList.get(qid);
         setQuestionView();
         ttsp.addText(currentQ.toSuck());
+    }
+
+    public void onClickRepeat(View view) {
+
+        ttsp.addText(currentQ.toSuck());
+
     }
 
     public void onClickNo(View view){
