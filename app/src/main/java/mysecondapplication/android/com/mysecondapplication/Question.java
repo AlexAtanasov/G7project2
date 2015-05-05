@@ -14,7 +14,7 @@ public class Question {
     private String answer;
 
 
-    public Question () {
+    public Question() {
 
         id = 0;    // override in constuctor?
         QUESTION = "";
@@ -32,7 +32,6 @@ public class Question {
         option_no = Option_no;
 
 
-
     }
 
     public int getId() {
@@ -48,12 +47,17 @@ public class Question {
     }
 
 
+
+    public String toSuck() {
+        return QUESTION;
+    }
+
     public String getQuestion() {
 
         return QUESTION;
     }
 
-    public String getOption_yes(){
+    public String getOption_yes() {
 
         return option_yes;
 
@@ -71,37 +75,30 @@ public class Question {
 
     }
 
-    public void setQuestion (String question) {
+    public void setQuestion(String question) {
 
         QUESTION = question;
 
     }
 
-    public void setOption_yes (String Option_yes) {
+    public void setOption_yes(String Option_yes) {
 
         option_yes = Option_yes;
 
     }
 
 
-    public void setOption_no (String Option_no) {
+    public void setOption_no(String Option_no) {
 
         option_no = Option_no;
 
     }
 
-    public void setAnswer (String Answer) {
+    public void setAnswer(String Answer) {
 
         answer = Answer;
 
     }
-
-
-
-
-    public String toString () {
-        return QUESTION;
-    }
-
-
 }
+
+

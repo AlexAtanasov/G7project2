@@ -3,6 +3,7 @@ package mysecondapplication.android.com.mysecondapplication;
         import android.content.Context;
         import android.content.Intent;
         import android.os.Bundle;
+        import android.os.Handler;
         import android.support.v7.app.ActionBarActivity;
         import android.util.Log;
         import android.view.Gravity;
@@ -26,21 +27,26 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        Handler h = new Handler();
 
         DatabaseHandler db = new DatabaseHandler(this);
         quesList=db.getAllQuestions();
         currentQ=quesList.get(qid);
         txtQuestion=(TextView)findViewById(R.id.questionText);
+
         setQuestionView();
 
         ttsp = new TxtS();
+
         ttsp.initialize(this);
 
-        ttsp.initText("hello");
+        h.postDelayed(new Runnable() {
+            @Override
+            public void run() {
 
-
-
+                ttsp.initText(currentQ.toSuck());
+            }
+        }, 400);
 
     }
 
@@ -83,7 +89,7 @@ public class MainActivity extends ActionBarActivity {
 
         currentQ = quesList.get(qid);
         setQuestionView();
-
+        ttsp.addText(currentQ.toSuck());
     }
 
     public void onClickNo(View view){
@@ -127,6 +133,7 @@ public class MainActivity extends ActionBarActivity {
        //  startActivity(intent);
         currentQ = quesList.get(qid);
         setQuestionView();
+        ttsp.addText(currentQ.toSuck());
 
     }
     public void setQuestionView()

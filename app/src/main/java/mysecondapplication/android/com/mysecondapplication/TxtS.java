@@ -50,6 +50,13 @@ public class TxtS {
             Log.e("error", "TextToSpeech failed to Initialize");
     }
 
+    public void addText(String text){
+        if (load)
+            TxtSp.speak(text, TextToSpeech.QUEUE_ADD, null);
+        else
+            Log.e("error", "TextToSpeech failed to Initialize");
+    }
+
 
     public void shutDown() {
         TxtSp.shutdown();
