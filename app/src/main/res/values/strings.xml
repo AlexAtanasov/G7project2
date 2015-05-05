@@ -6,8 +6,10 @@
     <string name="yesButton">Yes</string>
     <string name="repButton">Repeat</string>
     <string name="noButton">No</string>
+
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_correct">CorrectActivity</string>
+    <string name="title_text_only">TOActivity</string>
     <string name="title_activity_activity_wrong">ActivityWrong</string>
     <string name="title_activity_start_menu">StartMenuAct</string>
     <string name="title_activity_wrong">ActivityWrong</string>

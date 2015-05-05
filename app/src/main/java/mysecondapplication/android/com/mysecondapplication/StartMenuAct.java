@@ -38,7 +38,7 @@ public class StartMenuAct extends FragmentActivity {
 
     public void onClickTextOnly(View view) {
 
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, TOActivity.class);
 
         startActivity(intent);
 

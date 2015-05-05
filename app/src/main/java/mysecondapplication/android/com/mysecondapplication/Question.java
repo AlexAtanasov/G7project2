@@ -16,7 +16,7 @@ public class Question {
 
     public Question() {
 
-        id = 0;    // override in constuctor?
+        id = 0;
         QUESTION = "";
         option_no = "";
         option_yes = "";

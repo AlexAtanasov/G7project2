@@ -24,12 +24,8 @@
             android:label="@string/title_activity_main" >
         </activity>
         <activity
-            android:name=".CorrectActivity"
-            android:label="@string/title_activity_correct" >
-        </activity>
-        <activity
-            android:name=".WrongActivity"
-            android:label="@string/title_activity_wrong" >
+            android:name=".TOActivity"
+            android:label="@string/title_text_only" >
         </activity>
 
         <!--<activity-->

@@ -1,37 +1,26 @@
 package mysecondapplication.android.com.mysecondapplication;
 
-        import android.content.Context;
-        import android.content.Intent;
-        import android.os.Bundle;
-        import android.os.Handler;
-        import android.support.v7.app.ActionBarActivity;
-        import android.util.Log;
-        import android.view.Gravity;
-        import android.view.View;
-        import android.widget.Button;
-        import android.widget.TextView;
-        import android.widget.Toast;
+import android.content.Context;
+import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.view.Gravity;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
-        import java.util.List;
+import java.util.List;
 
+public class TOActivity extends ActionBarActivity {
 
-public class MainActivity extends ActionBarActivity {
     List<Question> quesList;
     int score = 0;
     int qid = 0;
     Question currentQ;
     TextView txtQuestion;
-    TxtS ttsp = null;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        ttsp = new TxtS();
-
-        ttsp.initialize(this);
-
-        Handler h = new Handler();
+        setContentView(R.layout.activity_to);
 
         DatabaseHandler db = new DatabaseHandler(this);
         quesList=db.getAllQuestions();
@@ -41,20 +30,11 @@ public class MainActivity extends ActionBarActivity {
         setQuestionView();
 
 
-
-        h.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-
-                ttsp.addText(currentQ.toSuck());
-            }
-        }, 400);
-
     }
 
     public void onClickYes(View view) {
 
-       if(currentQ.getAnswer().equals("yes")) {
+        if(currentQ.getAnswer().equals("yes")) {
 
             Context context = getApplicationContext();
             CharSequence text = "yes";
@@ -67,9 +47,8 @@ public class MainActivity extends ActionBarActivity {
 
             toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.START, 370, 95);
 
-            String cor = "Correct!";
-            ttsp.initText(cor);
-            score++;
+
+
 
         } else {
             Context context = getApplicationContext();
@@ -83,20 +62,15 @@ public class MainActivity extends ActionBarActivity {
 
             toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.START, 370, 95);
 
-            String wro = "Incorrect!";
-            ttsp.initText(wro);
+
         }
 
         currentQ = quesList.get(qid);
         setQuestionView();
-        ttsp.addText(currentQ.toSuck());
-    }
-
-    public void onClickRepeat(View view) {
-
-        ttsp.addText(currentQ.toSuck());
 
     }
+
+
 
     public void onClickNo(View view){
 
@@ -114,9 +88,8 @@ public class MainActivity extends ActionBarActivity {
 
             toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.START, 370, 95);
 
-            String cor = "Correct!";
-            ttsp.initText(cor);
-            score++;
+
+
 
         } else {
             Context context = getApplicationContext();
@@ -130,15 +103,15 @@ public class MainActivity extends ActionBarActivity {
 
             toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.START, 370, 95);
 
-            String wro = "Incorrect!";
-            ttsp.initText(wro);
+
         }
 
         currentQ = quesList.get(qid);
         setQuestionView();
-        ttsp.addText(currentQ.toSuck());
+
 
     }
+
     public void setQuestionView()
     {
 
