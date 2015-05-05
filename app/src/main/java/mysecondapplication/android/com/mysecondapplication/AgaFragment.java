@@ -73,7 +73,17 @@ public class AgaFragment extends Fragment {
                             public void levelChanged(final DriverDistractionLevel driverDistractionLevel) {
                                 ds.post(new Runnable() { // Post the result back to the View/UI thread
                                     public void run() {
-                                        ds.setTextSize(driverDistractionLevel.getLevel() * 10.0F + 12.0F);
+                                        if(driverDistractionLevel.getLevel() == 0 ||
+                                           driverDistractionLevel.getLevel() == 1 ) {
+                                            ds.setBackgroundColor(0xff00ff00);
+                                        }
+                                        if(driverDistractionLevel.getLevel() == 2||
+                                           driverDistractionLevel.getLevel() == 3){
+                                            ds.setBackgroundColor(0xffffff00);
+                                        }
+                                        if(driverDistractionLevel.getLevel() == 4){
+                                            ds.setBackgroundColor(0xffff0000);
+                                        }
                                     }
                                 });
                             }
