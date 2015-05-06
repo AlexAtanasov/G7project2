@@ -25,6 +25,17 @@
         android:onClick="onClickYes"/>
 
     <TextView
+        android:id="@+id/questionFact"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#fffcffe3"
+        android:text="fact"
+        android:gravity="center"
+        android:layout_below="@+id/btnYes"
+        android:visibility="invisible" />
+
+    <TextView
         android:id="@+id/questionText"
         android:layout_width="match_parent"
         android:layout_height="64dp"
@@ -34,6 +45,8 @@
         android:gravity="center"
         android:layout_below="@+id/btnYes"
         android:visibility="invisible" />
+
+
 
 
     <Button

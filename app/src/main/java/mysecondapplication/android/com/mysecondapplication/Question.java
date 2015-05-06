@@ -9,29 +9,44 @@ public class Question {
 
     private int id;
     private String QUESTION;
+    private String fact;
     private String option_yes;
     private String option_no;
     private String answer;
 
 
+
+
     public Question() {
 
+
         id = 0;
+        fact = "";
         QUESTION = "";
         option_no = "";
         option_yes = "";
         answer = "";
 
+
     }
 
-    public Question(String Question, String Answer, String Option_yes, String Option_no) {
+    public Question(String Fact, String Question, String Answer, String Option_yes, String Option_no) {
 
+        fact = Fact;
         QUESTION = Question;
         answer = Answer;
         option_yes = Option_yes;
         option_no = Option_no;
 
 
+    }
+
+    public String getFact() {
+        return fact;
+    }
+
+    public void setFact(String fact) {
+        this.fact = fact;
     }
 
     public int getId() {
@@ -48,7 +63,13 @@ public class Question {
 
 
 
+    public String toFact() {
+
+        return fact;
+    }
+
     public String toSuck() {
+
         return QUESTION;
     }
 

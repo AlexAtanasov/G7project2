@@ -31,11 +31,14 @@ public class MainActivity extends ActionBarActivity {
 
         ttsp.initialize(this);
 
+
         Handler h = new Handler();
 
         DatabaseHandler db = new DatabaseHandler(this);
         quesList=db.getAllQuestions();
         currentQ=quesList.get(qid);
+
+        txtQuestion=(TextView)findViewById(R.id.questionFact);
         txtQuestion=(TextView)findViewById(R.id.questionText);
 
         setQuestionView();
@@ -46,6 +49,7 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void run() {
 
+                ttsp.addText(currentQ.toFact());
                 ttsp.addText(currentQ.toSuck());
             }
         }, 400);
@@ -89,11 +93,13 @@ public class MainActivity extends ActionBarActivity {
 
         currentQ = quesList.get(qid);
         setQuestionView();
+        ttsp.addText(currentQ.toFact());
         ttsp.addText(currentQ.toSuck());
     }
 
     public void onClickRepeat(View view) {
 
+        //ttsp.addText(currentQ.toFact());
         ttsp.addText(currentQ.toSuck());
 
     }
@@ -136,12 +142,13 @@ public class MainActivity extends ActionBarActivity {
 
         currentQ = quesList.get(qid);
         setQuestionView();
+        ttsp.addText(currentQ.toFact());
         ttsp.addText(currentQ.toSuck());
 
     }
     public void setQuestionView()
     {
-
+        txtQuestion.setText(currentQ.getFact());
         txtQuestion.setText(currentQ.getQuestion());
 
         qid++;
