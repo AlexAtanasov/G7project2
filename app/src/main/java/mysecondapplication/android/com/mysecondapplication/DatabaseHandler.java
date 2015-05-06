@@ -13,7 +13,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
-    private static final int DATABASE_VERSION = 3;    //ATT!!! If you made any change into db - increase this int!!!
+    private static final int DATABASE_VERSION = 4;    //ATT!!! If you made any change into db - increase this int!!!
     // Database Name
     private static final String DATABASE_NAME = "QUESTION";
     // tasks table name
@@ -44,39 +44,52 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
 
 
-
     private void addQuestions() {
 
-        Question id1  = new Question("Hello", "Is Stockholm a city in Sweden?", "yes", "yes", "no");
+        Question id1  = new Question("Did you know that Poland is the ninth largest country in Europe.", "Is Krakow the capital of Poland?", "yes", "yes", "no");
         this.insertIntoDb(id1);
-        Question id2  = new Question("Hello", "Is Boston capital of USA?", "no", "yes", "no");
+        Question id2  = new Question("Did you know that only three percent of Turkey lies in Europe.", "Is Turkey part of the EU?", "no", "yes", "no");
         this.insertIntoDb(id2);
-        Question id3  = new Question("Hello", "Is Ottawa capital of Canada?", "yes", "yes", "no");
+        Question id3  = new Question("Did you know that Brazil is a five time football World champion.", "Is Rio the largest city in Brazil?", "yes", "yes", "no");
         this.insertIntoDb(id3);
-        Question id4  = new Question("Hello", "Is Bern city in France?", "no", "yes", "no");
+        Question id4  = new Question("Did you know that Brazil is the largest country in South America.", "Is Rio the capital of Brazil?", "no", "yes", "no");
         this.insertIntoDb(id4);
-        Question id5  = new Question("Hello", "Is Barcelona capital of Spain?", "no", "yes", "no");
+        Question id5  = new Question("Did you know that United Stated purchased Alaska from Russia in 1867 for 7.2 million dollars.", "Is Alaska the largest state in the USA?", "yes", "yes", "no");
         this.insertIntoDb(id5);
-        Question id6  = new Question("Hello", "Is Astana capital of Kazakhstan?", "yes", "yes", "no");
+        Question id6  = new Question("Did you know that Russian is official language in Kazakhstan.", "Is Astana capital of Kazakhstan?", "yes", "yes", "no");
         this.insertIntoDb(id6);
-        Question id7  = new Question("Hello", "Is Dubai capital of UAE?", "no", "yes", "no");
+        Question id7  = new Question("Did you know that Great Britain was a World ice hockey champion in 1936.", "Is United Kingdom in the European union?", "yes", "yes", "no");
         this.insertIntoDb(id7);
-        Question id8  = new Question("Hello", "Is Rio de Janeiro capital of Brazil?", "no", "yes", "no");
+        Question id8  = new Question("Did you know that Bulgaria is the biggest producer of roses in the world.", "Is Sofia the capital of Bulgaria?", "yes", "yes", "no");
         this.insertIntoDb(id8);
-        Question id9  = new Question("Hello", "Is Vancouver capital of Canada?", "no", "yes", "no");
+        Question id9  = new Question("Did you know that Greenland is part of the Kingdom of Denmark.", "In Bergen a city in Denmark?", "no", "yes", "no");
         this.insertIntoDb(id9);
-        Question id10  = new Question("Hello", "Is Lyon city in France?", "yes", "yes", "no");
+        Question id10  = new Question("Did you know that Canada has more lakes than the rest of the world combined.", "Is Vancouver the capital of Canada?", "no", "yes", "no");
         this.insertIntoDb(id10);
-        Question id11  = new Question("Hello", "Is Islamabad capital of Pakistan?", "yes", "yes", "no");
+        Question id11  = new Question("Did you know that Istanbul is the only city in the world located on two continents.", "Is Istanbul the capital of Turkey?", "no", "yes", "no");
         this.insertIntoDb(id11);
-        Question id12  = new Question("Hello", "Is Guam part of USA?", "yes", "yes", "no");
+        Question id12  = new Question("Did you know that there are more Irish in New York City than in Dublin.", "Is Dublin the capital of Ireland?", "yes", "yes", "no");
         this.insertIntoDb(id12);
-        Question id13  = new Question("Hello", "Is Minsk capital of Ukraine?", "no", "yes", "no");
+        Question id13  = new Question("Did you know that Siberia contains more than 25% of the world's forests.", "Is Siberia a country?", "no", "yes", "no");
         this.insertIntoDb(id13);
-        Question id14  = new Question("Hello", "Is Istanbul capital of Turkey?", "no", "yes", "no");
+        Question id14  = new Question("Did you know that Spain literally means 'the land of rabbits.'", "Is Cordoba a city in Spain?", "yes", "yes", "no");
         this.insertIntoDb(id14);
-        Question id15  = new Question("Hello", "Is Sofia capital of Bulgaria?", "yes", "yes", "no");
+        Question id15  = new Question("Did you know that the first city to reach a population of 1 million people was Rome.", "Is Rome the capital of Italy?", "yes", "yes", "no");
         this.insertIntoDb(id15);
+        Question id16  = new Question("Did you know that next to Warsaw Chicago has the largest Polish population in the world.", "Is Warsaw the capital of Poland?", "yes", "yes", "no");
+        this.insertIntoDb(id16);
+        Question id17  = new Question("Did you know that almost to the end of the 1980s there was not a single phone in Bhutan.", "Is Bhutan a country in Africa?", "no", "yes", "no");
+        this.insertIntoDb(id17);
+        Question id18  = new Question("Did you know that the Red Sea is the warmest sea in the world.", "Is Israel on the coast of the Red Sea?", "yes", "yes", "no");
+        this.insertIntoDb(id18);
+        Question id19  = new Question("Did you know that in South America the only two countries that do not have access to the ocean are Bolivia and Paraguay.", "Is Bolivia bigger country by area than Paraguay?", "yes", "yes", "no");
+        this.insertIntoDb(id19);
+        Question id20  = new Question("Did you know that the most distant spot from all of the oceans on Earth lies in China.", "Is Shanghai the largest city in China?", "yes", "yes", "no");
+        this.insertIntoDb(id20);
+        Question id21  = new Question("Did you know that India is the World's largest producer of bananas.", "Is Bombay the capital of India?", "no", "yes", "no");
+        this.insertIntoDb(id21);
+        Question id22  = new Question("Did you know that the oldest continuously used national flag is that of Denmark.", "Is the oldest Legoland in Denmark?", "yes", "yes", "no");
+        this.insertIntoDb(id22);
 
   }
 
