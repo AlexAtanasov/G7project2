@@ -30,8 +30,10 @@
         android:textSize="40sp"
         android:text="@string/BckButton"
         android:height="190dp"
-        android:background="#ffb8aca6"
+        android:background="@drawable/custom_back"
         android:onClick="onClickBack"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        style="@style/btnBack"
+        />
 
 </RelativeLayout>
