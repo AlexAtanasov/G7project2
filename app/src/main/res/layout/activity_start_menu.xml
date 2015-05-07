@@ -55,9 +55,10 @@
                 android:layout_row="0"
                 android:layout_column="1"
                 android:textSize="25dp"
-                android:background="#FF6069FF"
-                android:textColor="#ffffffff"
-                android:onClick="onClickTextToSpeech"/>
+                android:background="@drawable/custom_btn_arsenic"
+                android:onClick="onClickTextToSpeech"
+                style ="@style/btnStyleArsenic"
+                />
         </GridLayout>
 
         <GridLayout
@@ -75,9 +76,10 @@
                 android:layout_row="4"
                 android:layout_column="1"
                 android:textSize="25dp"
-                android:background="#ff6069ff"
+                android:background="@drawable/custom_btn_genoa"
                 android:textColor="#ffffffff"
                 android:onClick="onClickTextOnly"
+                style ="@style/btnStyleGenoa"
                 />
 
         </GridLayout>
