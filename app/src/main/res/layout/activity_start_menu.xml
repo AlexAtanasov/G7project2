@@ -67,6 +67,7 @@
             android:layout_column="1">
 
             <Button
+
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:text="TEXT ONLY"
@@ -76,7 +77,9 @@
                 android:textSize="25dp"
                 android:background="#ff6069ff"
                 android:textColor="#ffffffff"
-                android:onClick="onClickTextOnly"/>
+                android:onClick="onClickTextOnly"
+                />
+
         </GridLayout>
     </GridLayout>
 </RelativeLayout>
