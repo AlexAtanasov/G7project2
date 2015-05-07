@@ -28,6 +28,11 @@
             android:label="@string/title_text_only" >
         </activity>
 
+        <activity
+            android:name=".ScoreActivity"
+            android:label="@string/title_score" >
+        </activity>
+
         <!--<activity-->
             <!--android:name=".StartMenuAct"-->
             <!--android:label="@string/title_activity_start_menu" >-->

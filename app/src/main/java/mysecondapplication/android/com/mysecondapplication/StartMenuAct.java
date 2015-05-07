@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.swedspot.vil.distraction.DriverDistraction;
+
 
 public class StartMenuAct extends FragmentActivity {
 
@@ -23,6 +25,8 @@ public class StartMenuAct extends FragmentActivity {
         AgaFragment agaFragment = new AgaFragment();
         fragmentTransaction.add(R.id.fragment_container,agaFragment);
         fragmentTransaction.commit();
+
+
     }
 
     public void onClickTextToSpeech (View view) {

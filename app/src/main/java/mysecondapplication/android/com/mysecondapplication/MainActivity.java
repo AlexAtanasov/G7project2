@@ -41,7 +41,9 @@ public class MainActivity extends ActionBarActivity {
         txtQuestion=(TextView)findViewById(R.id.questionFact);
         txtQuestion=(TextView)findViewById(R.id.questionText);
 
+
         setQuestionView();
+
 
 
 
@@ -93,8 +95,10 @@ public class MainActivity extends ActionBarActivity {
 
         currentQ = quesList.get(qid);
         setQuestionView();
-        ttsp.addText(currentQ.toFact());
-        ttsp.addText(currentQ.toSuck());
+        if(qid<11) {
+            ttsp.addText(currentQ.toFact());
+            ttsp.addText(currentQ.toSuck());
+        }
     }
 
     public void onClickRepeat(View view) {
@@ -142,15 +146,26 @@ public class MainActivity extends ActionBarActivity {
 
         currentQ = quesList.get(qid);
         setQuestionView();
-        ttsp.addText(currentQ.toFact());
-        ttsp.addText(currentQ.toSuck());
+        if(qid<11) {
+            ttsp.addText(currentQ.toFact());
+            ttsp.addText(currentQ.toSuck());
+        }
 
     }
     public void setQuestionView()
     {
+
         txtQuestion.setText(currentQ.getFact());
         txtQuestion.setText(currentQ.getQuestion());
 
         qid++;
+
+        if (qid==11) {
+
+            Intent intent = new Intent(this, ScoreActivity.class);
+
+            startActivity(intent);
+
+        }
     }
 }
