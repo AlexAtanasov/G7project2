@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:id="@+id/imageView"
+        android:scaleType="fitCenter"
+        android:src="@drawable/titlemenu"
+
+        android:focusableInTouchMode="false"
+        android:background="#ffc2c2c2" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ff000000"
+        android:text="Score"
+        android:gravity="center"
+        android:layout_below="@+id/imageView"
+        android:layout_above="@+id/btnBck" />
+
+    <Button
+        android:id="@+id/btnBck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:text="@string/BckButton"
+        android:height="190dp"
+        android:background="#ffb8aca6"
+        android:onClick="onClickBack"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

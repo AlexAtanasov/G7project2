@@ -1,6 +1,7 @@
 package mysecondapplication.android.com.mysecondapplication;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Gravity;
@@ -64,9 +65,10 @@ public class TOActivity extends ActionBarActivity {
 
 
         }
-
-        currentQ = quesList.get(qid);
-        setQuestionView();
+        if(qid<11) {
+            currentQ = quesList.get(qid);
+            setQuestionView();
+        }
 
     }
 
@@ -107,7 +109,11 @@ public class TOActivity extends ActionBarActivity {
         }
 
         currentQ = quesList.get(qid);
-        setQuestionView();
+        if(qid<11) {
+
+            setQuestionView();
+
+         }
 
 
     }
@@ -118,5 +124,14 @@ public class TOActivity extends ActionBarActivity {
         txtQuestion.setText(currentQ.getQuestion());
 
         qid++;
+
+        if (qid==11) {
+
+
+            Intent intent = new Intent(this, ScoreActivity.class);
+
+            startActivity(intent);
+
+        }
     }
 }

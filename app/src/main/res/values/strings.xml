@@ -4,10 +4,12 @@
     <string name="app_name">MySecondApplication</string>
     <string name="action_settings">Settings</string>
     <string name="yesButton">Yes</string>
+    <string name="BckButton">Back</string>
     <string name="repButton">Repeat</string>
     <string name="noButton">No</string>
 
     <string name="title_activity_main">MainActivity</string>
+    <string name="title_score">ScoreActivity</string>
     <string name="title_activity_correct">CorrectActivity</string>
     <string name="title_text_only">TOActivity</string>
     <string name="title_activity_activity_wrong">ActivityWrong</string>
