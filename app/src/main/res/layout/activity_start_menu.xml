@@ -80,7 +80,7 @@
                 android:textColor="#ffffffff"
                 android:onClick="onClickTextOnly"
                 style ="@style/btnStyleGenoa"
-                />
+                android:layout_gravity="left" />
 
         </GridLayout>
     </GridLayout>
