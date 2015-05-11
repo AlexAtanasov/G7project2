@@ -7,6 +7,7 @@ import android.support.v7.app.ActionBarActivity;
 
 import android.os.Handler;
 import android.view.View;
+import android.widget.TextView;
 
 public class ScoreActivity extends ActionBarActivity{
 
@@ -15,6 +16,11 @@ public class ScoreActivity extends ActionBarActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
 
+        Bundle b = getIntent().getExtras();
+        int score = b.getInt("score");
+
+        TextView t =(TextView)findViewById(R.id.score2);
+        t.setText(String.valueOf(score));
 
 
 
@@ -23,7 +29,7 @@ public class ScoreActivity extends ActionBarActivity{
             public void run() {
                 delayReturn();
             }
-        }, 5000);
+        }, 8000);
     }
 
 

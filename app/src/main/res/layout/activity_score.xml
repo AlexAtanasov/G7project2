@@ -13,7 +13,7 @@
         android:background="#ffc2c2c2" />
 
     <TextView
-        android:id="@+id/score"
+        android:id="@+id/score2"
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
