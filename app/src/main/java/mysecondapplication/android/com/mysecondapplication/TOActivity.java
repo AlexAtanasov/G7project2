@@ -129,7 +129,7 @@ public class TOActivity extends ActionBarActivity {
         if (qid==11) {
 
 
-            Intent intent = new Intent(this, ScoreActivity.class);
+            Intent intent = new Intent(this, ScoreTOActivity.class);
             Bundle b = new Bundle();
             b.putInt("score", score);
             intent.putExtras(b);

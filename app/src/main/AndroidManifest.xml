@@ -32,6 +32,10 @@
             android:name=".ScoreActivity"
             android:label="@string/title_score" >
         </activity>
+        <activity
+            android:name=".ScoreTOActivity"
+            android:label="@string/title_score_to" >
+        </activity>
 
         <!--<activity-->
             <!--android:name=".StartMenuAct"-->
