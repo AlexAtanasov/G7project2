@@ -22,7 +22,8 @@
         android:gravity="center"
         android:layout_below="@+id/imageView"
         android:layout_above="@+id/btnBck"
-        android:textSize="@dimen/abc_text_size_display_4_material" />
+        android:textSize="@dimen/abc_action_button_min_width_overflow_material"
+        android:textIsSelectable="true" />
 
     <Button
         android:id="@+id/btnBck"

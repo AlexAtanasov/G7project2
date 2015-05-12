@@ -9,17 +9,14 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.TextView;
 
-public class ScoreActivity extends ActionBarActivity{
+public class ScoreTOActivity extends ActionBarActivity{
 
-    TxtS ttsp = null;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_score);
+        setContentView(R.layout.activity_score_to);
 
 
-        ttsp = new TxtS();
-        ttsp.initialize(this);
 
 
         Bundle b = getIntent().getExtras();
@@ -28,15 +25,13 @@ public class ScoreActivity extends ActionBarActivity{
 
 
         TextView t = (TextView) findViewById(R.id.score2);
-        t.setText(String.valueOf(score));
+        t.setText("From 10 questions you answered correctly " + String.valueOf(score));
 
 
         h.postDelayed(new Runnable() {
             @Override
             public void run() {
 
-                String cor = ("From 10 questions you answered correctly " + String.valueOf(score));
-                ttsp.initText(cor);
 
             }
         }, 400);
@@ -45,7 +40,7 @@ public class ScoreActivity extends ActionBarActivity{
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-            delayReturn();
+                delayReturn();
             }
         }, 8000);
     }
@@ -61,11 +56,6 @@ public class ScoreActivity extends ActionBarActivity{
     public void delayReturn() {
         Intent intent = new Intent(this, StartMenuAct.class);
         startActivity(intent);
-
-
-
-
-
 
     }
 }

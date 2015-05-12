@@ -10,6 +10,8 @@
 
     <string name="title_activity_main">MainActivity</string>
     <string name="title_score">ScoreActivity</string>
+    <string name="title_score_to">MainActivity</string>
+
     <string name="title_activity_correct">CorrectActivity</string>
     <string name="title_text_only">TOActivity</string>
     <string name="title_activity_activity_wrong">ActivityWrong</string>
