@@ -85,11 +85,6 @@ public class MainActivity extends ActionBarActivity {
             Toast toast;
             toast = Toast.makeText(context,"Incorrect!", Toast.LENGTH_SHORT);
             toast.show();
-<<<<<<< HEAD
-
-=======
->>>>>>> 4f38b4bf0a1c5973df6128283a67803c42a3a0f8
-
             toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.START, 370, 95);
 
             String wro = "Incorrect!";
