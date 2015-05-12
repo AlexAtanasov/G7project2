@@ -6,14 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
-import com.swedspot.vil.distraction.DriverDistraction;
 
 
 public class StartMenuAct extends FragmentActivity {
+    int distraction;
 
 
     @Override
@@ -25,8 +27,26 @@ public class StartMenuAct extends FragmentActivity {
         AgaFragment agaFragment = new AgaFragment();
         fragmentTransaction.add(R.id.fragment_container,agaFragment);
         fragmentTransaction.commit();
+        final TextView ds = (TextView) findViewById(R.id.displaySpeed);
+
+        Bundle b = getIntent().getExtras();
+            if(b != null) {
+                distraction = b.getInt("Distraction");
+            }
+        Log.d("blah", String.valueOf(distraction));
 
 
+        if(distraction == 0 ||
+           distraction== 1 ) {
+           ds.setBackgroundColor(0xff00ff00);
+        }
+        if(distraction== 2||
+           distraction== 3){
+            ds.setBackgroundColor(0xffffff00);
+        }
+        if(distraction== 4){
+            ds.setBackgroundColor(0xffff0000);
+        }
     }
 
     public void onClickTextToSpeech (View view) {
@@ -34,9 +54,6 @@ public class StartMenuAct extends FragmentActivity {
         Intent intent = new Intent(this, MainActivity.class);
 
         startActivity(intent);
-
-
-
     }
 
 
@@ -45,9 +62,6 @@ public class StartMenuAct extends FragmentActivity {
         Intent intent = new Intent(this, TOActivity.class);
 
         startActivity(intent);
-
-
-
     }
 
     }
