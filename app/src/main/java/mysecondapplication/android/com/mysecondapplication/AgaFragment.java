@@ -2,16 +2,19 @@
 package mysecondapplication.android.com.mysecondapplication;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.swedspot.automotiveapi.AutomotiveSignal;
 import android.swedspot.automotiveapi.AutomotiveSignalId;
 import android.swedspot.scs.data.SCSFloat;
+import android.text.Selection;
 import android.widget.TextView;
 
 import com.swedspot.automotiveapi.AutomotiveFactory;
 import com.swedspot.automotiveapi.AutomotiveListener;
+import com.swedspot.vil.distraction.DriverDistraction;
 import com.swedspot.vil.distraction.DriverDistractionLevel;
 import com.swedspot.vil.distraction.DriverDistractionListener;
 import com.swedspot.vil.distraction.LightMode;
@@ -21,6 +24,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+
+import java.io.BufferedInputStream;
+import java.io.InputStream;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.Runnable;
@@ -32,9 +38,6 @@ import java.lang.String;
  * Created by Viktor on 2015-04-24.
  */
 public class AgaFragment extends Fragment {
-
-
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -73,17 +76,11 @@ public class AgaFragment extends Fragment {
                             public void levelChanged(final DriverDistractionLevel driverDistractionLevel) {
                                 ds.post(new Runnable() { // Post the result back to the View/UI thread
                                     public void run() {
-                                        if(driverDistractionLevel.getLevel() == 0 ||
-                                           driverDistractionLevel.getLevel() == 1 ) {
-                                            ds.setBackgroundColor(0xff00ff00);
-                                        }
-                                        if(driverDistractionLevel.getLevel() == 2||
-                                           driverDistractionLevel.getLevel() == 3){
-                                            ds.setBackgroundColor(0xffffff00);
-                                        }
-                                        if(driverDistractionLevel.getLevel() == 4){
-                                            ds.setBackgroundColor(0xffff0000);
-                                        }
+                                        Intent i = new Intent(AgaFragment.this.getActivity(), StartMenuAct.class);
+                                        Bundle b = new Bundle();
+                                        b.putInt("Distraction", driverDistractionLevel.getLevel());
+                                        i.putExtras(b);
+                                        startActivity(i);
                                     }
                                 });
                             }
@@ -104,5 +101,6 @@ public class AgaFragment extends Fragment {
         async.execute();
         return view;
     }
+
 }
 
