@@ -13,7 +13,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
-    private static final int DATABASE_VERSION = 4;    //ATT!!! If you made any change into db - increase this int!!!
+    private static final int DATABASE_VERSION = 5;    //ATT!!! If you made any change into db - increase this int!!!
     // Database Name
     private static final String DATABASE_NAME = "QUESTION";
     // tasks table name
@@ -46,7 +46,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     private void addQuestions() {
 
-        Question id1  = new Question("Did you know that Poland is the ninth largest country in Europe.", "Is Krakow the capital of Poland?", "yes", "yes", "no");
+        Question id1  = new Question("Did you know that Poland is the ninth largest country in Europe.", "Is Krakow the capital of Poland?", "no", "yes", "no");
         this.insertIntoDb(id1);
         Question id2  = new Question("Did you know that only three percent of Turkey lies in Europe.", "Is Turkey part of the EU?", "no", "yes", "no");
         this.insertIntoDb(id2);

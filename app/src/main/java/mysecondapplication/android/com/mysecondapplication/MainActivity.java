@@ -75,7 +75,7 @@ public class MainActivity extends ActionBarActivity {
 
             String cor = "Correct!";
             ttsp.initText(cor);
-            score++;
+
 
         } else {
             Context context = getApplicationContext();
@@ -85,7 +85,10 @@ public class MainActivity extends ActionBarActivity {
             Toast toast;
             toast = Toast.makeText(context,"Incorrect!", Toast.LENGTH_SHORT);
             toast.show();
-            score++;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4f38b4bf0a1c5973df6128283a67803c42a3a0f8
 
             toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.START, 370, 95);
 
@@ -126,7 +129,7 @@ public class MainActivity extends ActionBarActivity {
 
             String cor = "Correct!";
             ttsp.initText(cor);
-            score++;
+
 
         } else {
             Context context = getApplicationContext();
@@ -136,7 +139,7 @@ public class MainActivity extends ActionBarActivity {
             Toast toast;
             toast = Toast.makeText(context,"Incorrect!", Toast.LENGTH_SHORT);
             toast.show();
-            score++;
+
 
             toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.START, 370, 95);
 
@@ -163,8 +166,13 @@ public class MainActivity extends ActionBarActivity {
         if (qid==11) {
 
             Intent intent = new Intent(this, ScoreActivity.class);
-
+            Bundle b = new Bundle();
+            b.putInt("score", score);
+            intent.putExtras(b);
             startActivity(intent);
+
+
+
 
         }
     }

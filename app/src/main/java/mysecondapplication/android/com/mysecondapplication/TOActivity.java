@@ -59,7 +59,7 @@ public class TOActivity extends ActionBarActivity {
             Toast toast;
             toast = Toast.makeText(context,"Incorrect!", Toast.LENGTH_SHORT);
             toast.show();
-            score++;
+
 
             toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.START, 370, 95);
 
@@ -101,7 +101,7 @@ public class TOActivity extends ActionBarActivity {
             Toast toast;
             toast = Toast.makeText(context,"Incorrect!", Toast.LENGTH_SHORT);
             toast.show();
-            score++;
+
 
             toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.START, 370, 95);
 
@@ -109,6 +109,7 @@ public class TOActivity extends ActionBarActivity {
         }
 
         currentQ = quesList.get(qid);
+
         if(qid<11) {
 
             setQuestionView();
@@ -128,8 +129,10 @@ public class TOActivity extends ActionBarActivity {
         if (qid==11) {
 
 
-            Intent intent = new Intent(this, ScoreActivity.class);
-
+            Intent intent = new Intent(this, ScoreTOActivity.class);
+            Bundle b = new Bundle();
+            b.putInt("score", score);
+            intent.putExtras(b);
             startActivity(intent);
 
         }
