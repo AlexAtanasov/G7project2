@@ -5,21 +5,18 @@ package mysecondapplication.android.com.mysecondapplication;
         import android.os.Bundle;
         import android.os.Handler;
         import android.support.v7.app.ActionBarActivity;
-        import android.util.Log;
         import android.view.Gravity;
         import android.view.View;
-        import android.widget.Button;
         import android.widget.TextView;
         import android.widget.Toast;
-
         import java.util.List;
 
 
 public class MainActivity extends ActionBarActivity {
-    List<Question> quesList;
+    List<Question> questionList;
     int score = 0;
-    int qid = 0;
-    Question currentQ;
+    int questionID = 0;
+    Question currentQuestion;
     TextView txtQuestion;
     TxtS ttsp = null;
 
@@ -28,39 +25,32 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         ttsp = new TxtS();
-
         ttsp.initialize(this);
-
 
         Handler h = new Handler();
 
         DatabaseHandler db = new DatabaseHandler(this);
-        quesList=db.getAllQuestions();
-        currentQ=quesList.get(qid);
+        questionList=db.getAllQuestions();
+        currentQuestion=questionList.get(questionID);
 
         txtQuestion=(TextView)findViewById(R.id.questionFact);
         txtQuestion=(TextView)findViewById(R.id.questionText);
 
-
         setQuestionView();
-
-
-
 
         h.postDelayed(new Runnable() {
             @Override
             public void run() {
 
-                ttsp.addText(currentQ.toFact());
-                ttsp.addText(currentQ.toSuck());
+                ttsp.addText(currentQuestion.toFact());
+                ttsp.addText(currentQuestion.getQuestion());
             }
         }, 400);
-
     }
 
     public void onClickYes(View view) {
 
-       if(currentQ.getAnswer().equals("yes")) {
+       if(currentQuestion.getAnswer().equals("yes")) {
 
             Context context = getApplicationContext();
             CharSequence text = "yes";
@@ -76,7 +66,6 @@ public class MainActivity extends ActionBarActivity {
             String cor = "Correct!";
             ttsp.initText(cor);
 
-
         } else {
             Context context = getApplicationContext();
             CharSequence text = "yes";
@@ -85,10 +74,6 @@ public class MainActivity extends ActionBarActivity {
             Toast toast;
             toast = Toast.makeText(context,"Incorrect!", Toast.LENGTH_SHORT);
             toast.show();
-<<<<<<< HEAD
-
-=======
->>>>>>> 4f38b4bf0a1c5973df6128283a67803c42a3a0f8
 
             toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.START, 370, 95);
 
@@ -96,25 +81,22 @@ public class MainActivity extends ActionBarActivity {
             ttsp.initText(wro);
         }
 
-        currentQ = quesList.get(qid);
+        currentQuestion = questionList.get(questionID);
         setQuestionView();
-        if(qid<11) {
-            ttsp.addText(currentQ.toFact());
-            ttsp.addText(currentQ.toSuck());
+        if(questionID < 11) {
+            ttsp.addText(currentQuestion.toFact());
+            ttsp.addText(currentQuestion.getQuestion());
         }
     }
 
     public void onClickRepeat(View view) {
-
         //ttsp.addText(currentQ.toFact());
-        ttsp.addText(currentQ.toSuck());
-
+        ttsp.addText(currentQuestion.getQuestion());
     }
 
     public void onClickNo(View view){
 
-
-        if(currentQ.getAnswer().equals("no")) {
+        if(currentQuestion.getAnswer().equals("no")) {
 
             Context context = getApplicationContext();
             CharSequence text = "no";
@@ -130,7 +112,6 @@ public class MainActivity extends ActionBarActivity {
             String cor = "Correct!";
             ttsp.initText(cor);
 
-
         } else {
             Context context = getApplicationContext();
             CharSequence text = "yes";
@@ -140,40 +121,32 @@ public class MainActivity extends ActionBarActivity {
             toast = Toast.makeText(context,"Incorrect!", Toast.LENGTH_SHORT);
             toast.show();
 
-
             toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.START, 370, 95);
 
             String wro = "Incorrect!";
             ttsp.initText(wro);
         }
 
-        currentQ = quesList.get(qid);
+        currentQuestion = questionList.get(questionID);
         setQuestionView();
-        if(qid<11) {
-            ttsp.addText(currentQ.toFact());
-            ttsp.addText(currentQ.toSuck());
+        if(questionID < 11) {
+            ttsp.addText(currentQuestion.toFact());
+            ttsp.addText(currentQuestion.getQuestion());
         }
-
     }
-    public void setQuestionView()
-    {
+    public void setQuestionView(){
+        txtQuestion.setText(currentQuestion.getFact());
+        txtQuestion.setText(currentQuestion.getQuestion());
 
-        txtQuestion.setText(currentQ.getFact());
-        txtQuestion.setText(currentQ.getQuestion());
+        questionID++;
 
-        qid++;
-
-        if (qid==11) {
+        if (questionID == 11) {
 
             Intent intent = new Intent(this, ScoreActivity.class);
             Bundle b = new Bundle();
             b.putInt("score", score);
             intent.putExtras(b);
             startActivity(intent);
-
-
-
-
         }
     }
 }

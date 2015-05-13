@@ -4,10 +4,10 @@ package mysecondapplication.android.com.mysecondapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-
 import android.os.Handler;
 import android.view.View;
 import android.widget.TextView;
+
 
 public class ScoreTOActivity extends ActionBarActivity{
 
@@ -16,22 +16,16 @@ public class ScoreTOActivity extends ActionBarActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score_to);
 
-
-
-
         Bundle b = getIntent().getExtras();
         final int score = b.getInt("score");
         Handler h = new Handler();
 
-
         TextView t = (TextView) findViewById(R.id.score2);
-        t.setText("From 10 questions you answered correctly " + String.valueOf(score));
-
+        t.setText("From 10 questions you answered " + String.valueOf(score) + " correctly");
 
         h.postDelayed(new Runnable() {
             @Override
             public void run() {
-
 
             }
         }, 400);
@@ -45,10 +39,7 @@ public class ScoreTOActivity extends ActionBarActivity{
         }, 8000);
     }
 
-
-
     public void onClickBack(View view) {
-
         Intent intent = new Intent(this, StartMenuAct.class);
         startActivity(intent);
     }
@@ -56,6 +47,5 @@ public class ScoreTOActivity extends ActionBarActivity{
     public void delayReturn() {
         Intent intent = new Intent(this, StartMenuAct.class);
         startActivity(intent);
-
     }
 }

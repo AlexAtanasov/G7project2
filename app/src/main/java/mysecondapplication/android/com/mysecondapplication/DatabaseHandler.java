@@ -5,8 +5,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.content.ContentValues;
-
-
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -40,9 +38,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 +KEY_OPTB +" TEXT)";
         db.execSQL(sql);
         addQuestions();
-
     }
-
 
     private void addQuestions() {
 
@@ -90,7 +86,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         this.insertIntoDb(id21);
         Question id22  = new Question("Did you know that the oldest continuously used national flag is that of Denmark.", "Is the oldest Legoland in Denmark?", "yes", "yes", "no");
         this.insertIntoDb(id22);
-
   }
 
     public void onUpgrade(SQLiteDatabase db, int oldV, int newV) {
@@ -132,7 +127,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
                 quesList.add(quest);
 
-
             } while (cursor.moveToNext());
         }
         Collections.shuffle(quesList);
@@ -141,8 +135,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         return quesList;
     }
-    public int rowcount()
-    {
+    public int rowcount(){
         int row=0;
         String selectQuery = "SELECT * FROM " + TABLE_QUEST;
         SQLiteDatabase db = this.getWritableDatabase();

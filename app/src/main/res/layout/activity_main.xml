@@ -25,16 +25,18 @@
         android:onClick="onClickYes"
         style = "@style/btnYes"
         />
+
     <TextView
         android:id="@+id/questionFact"
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#fffcffe3"
-        android:text="fact"
+        android:text="@string/Fact"
         android:gravity="center"
         android:layout_below="@+id/btnYes"
-        android:visibility="invisible" />
+        android:visibility="invisible"
+        />
 
     <TextView
         android:id="@+id/questionText"
@@ -42,13 +44,11 @@
         android:layout_height="64dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#fffcffe3"
-        android:text="question"
+        android:text="@string/Question"
         android:gravity="center"
         android:layout_below="@+id/btnYes"
-        android:visibility="invisible" />
-
-
-
+        android:visibility="invisible"
+        />
 
     <Button
         android:id="@+id/btnRep"
@@ -80,15 +80,3 @@
         />
 
 </RelativeLayout>
-
-
-
-
-
-
-
-
-
-
-
-

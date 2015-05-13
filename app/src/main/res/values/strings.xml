@@ -18,6 +18,10 @@
     <string name="title_activity_start_menu">StartMenuAct</string>
     <string name="title_activity_wrong">ActivityWrong</string>
     <string name="title_aga">AGA</string>
+    <string name="Speed">Display Speed Here</string>
+    <string name="Question">question</string>
+    <string name="Fact">fact</string>
+    <string name="Score">score</string>
 
 
 </resources>

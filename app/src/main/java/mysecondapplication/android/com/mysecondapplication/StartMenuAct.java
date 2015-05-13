@@ -1,17 +1,12 @@
 package mysecondapplication.android.com.mysecondapplication;
 
-import android.app.Activity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-
 
 
 public class StartMenuAct extends FragmentActivity {
@@ -33,8 +28,7 @@ public class StartMenuAct extends FragmentActivity {
             if(b != null) {
                 distraction = b.getInt("Distraction");
             }
-        Log.d("blah", String.valueOf(distraction));
-
+        //Log.d("blah", String.valueOf(distraction));
 
         if(distraction == 0 ||
            distraction== 1 ) {
@@ -42,27 +36,20 @@ public class StartMenuAct extends FragmentActivity {
         }
         if(distraction== 2||
            distraction== 3){
-            ds.setBackgroundColor(0xffffff00);
+           ds.setBackgroundColor(0xffffff00);
         }
         if(distraction== 4){
-            ds.setBackgroundColor(0xffff0000);
+           ds.setBackgroundColor(0xffff0000);
         }
     }
 
     public void onClickTextToSpeech (View view) {
-
         Intent intent = new Intent(this, MainActivity.class);
-
         startActivity(intent);
     }
-
 
     public void onClickTextOnly(View view) {
-
         Intent intent = new Intent(this, TOActivity.class);
-
         startActivity(intent);
     }
-
-    }
-
+}

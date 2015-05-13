@@ -29,14 +29,11 @@ public class TOActivity extends ActionBarActivity {
         txtQuestion=(TextView)findViewById(R.id.questionText);
 
         setQuestionView();
-
-
     }
 
     public void onClickYes(View view) {
 
         if(currentQ.getAnswer().equals("yes")) {
-
             Context context = getApplicationContext();
             CharSequence text = "yes";
             int duration = Toast.LENGTH_SHORT;
@@ -48,9 +45,6 @@ public class TOActivity extends ActionBarActivity {
 
             toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.START, 370, 95);
 
-
-
-
         } else {
             Context context = getApplicationContext();
             CharSequence text = "yes";
@@ -60,25 +54,17 @@ public class TOActivity extends ActionBarActivity {
             toast = Toast.makeText(context,"Incorrect!", Toast.LENGTH_SHORT);
             toast.show();
 
-
             toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.START, 370, 95);
-
-
         }
         if(qid<11) {
             currentQ = quesList.get(qid);
             setQuestionView();
         }
-
     }
-
-
 
     public void onClickNo(View view){
 
-
         if(currentQ.getAnswer().equals("no")) {
-
             Context context = getApplicationContext();
             CharSequence text = "no";
             int duration = Toast.LENGTH_SHORT;
@@ -89,10 +75,6 @@ public class TOActivity extends ActionBarActivity {
             score++;
 
             toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.START, 370, 95);
-
-
-
-
         } else {
             Context context = getApplicationContext();
             CharSequence text = "yes";
@@ -102,39 +84,24 @@ public class TOActivity extends ActionBarActivity {
             toast = Toast.makeText(context,"Incorrect!", Toast.LENGTH_SHORT);
             toast.show();
 
-
             toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.START, 370, 95);
-
-
         }
-
         currentQ = quesList.get(qid);
-
         if(qid<11) {
-
             setQuestionView();
-
-         }
-
-
+        }
     }
 
-    public void setQuestionView()
-    {
+    public void setQuestionView(){
 
         txtQuestion.setText(currentQ.getQuestion());
-
         qid++;
-
         if (qid==11) {
-
-
             Intent intent = new Intent(this, ScoreTOActivity.class);
             Bundle b = new Bundle();
             b.putInt("score", score);
             intent.putExtras(b);
             startActivity(intent);
-
         }
     }
 }

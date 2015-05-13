@@ -3,7 +3,6 @@ package mysecondapplication.android.com.mysecondapplication;
 import android.content.Context;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
-
 import java.util.Locale;
 
 /**
@@ -17,6 +16,7 @@ public class TxtS {
     private TextToSpeech.OnInitListener onInit = new TextToSpeech.OnInitListener() {
 
         public void onInit(int status) {
+
             if (status == TextToSpeech.SUCCESS) {
                 int result = TxtSp.setLanguage(Locale.US);
                 load = true;
@@ -31,19 +31,14 @@ public class TxtS {
     };
 
     public void initialize(Context context) {
-
         try {
             TxtSp = new TextToSpeech(context, onInit);
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
-
-
     public void initText(String text) {
-
         if (load)
             TxtSp.speak(text, TextToSpeech.QUEUE_FLUSH, null);
         else
@@ -56,7 +51,6 @@ public class TxtS {
         else
             Log.e("error", "TextToSpeech failed to Initialize");
     }
-
 
     public void shutDown() {
         TxtSp.shutdown();

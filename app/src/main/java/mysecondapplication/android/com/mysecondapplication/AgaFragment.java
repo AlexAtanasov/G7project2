@@ -1,7 +1,6 @@
 
 package mysecondapplication.android.com.mysecondapplication;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -9,9 +8,7 @@ import android.support.annotation.Nullable;
 import android.swedspot.automotiveapi.AutomotiveSignal;
 import android.swedspot.automotiveapi.AutomotiveSignalId;
 import android.swedspot.scs.data.SCSFloat;
-import android.text.Selection;
 import android.widget.TextView;
-
 import com.swedspot.automotiveapi.AutomotiveFactory;
 import com.swedspot.automotiveapi.AutomotiveListener;
 import com.swedspot.vil.distraction.DriverDistraction;
@@ -24,9 +21,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
-
-import java.io.BufferedInputStream;
-import java.io.InputStream;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.Runnable;
@@ -62,12 +56,12 @@ public class AgaFragment extends Fragment {
                                     });
                                 }
                         }
-                @Override
-                            public void timeout(int i) {
+                        @Override
+                        public void timeout(int i) {
                             }
 
-                            @Override
-                            public void notAllowed(int i) {
+                        @Override
+                        public void notAllowed(int i) {
                             }
                         },
 
@@ -101,6 +95,5 @@ public class AgaFragment extends Fragment {
         async.execute();
         return view;
     }
-
 }
 

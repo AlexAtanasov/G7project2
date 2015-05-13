@@ -6,7 +6,6 @@ package mysecondapplication.android.com.mysecondapplication;
  */
 public class Question {
 
-
     private int id;
     private String QUESTION;
     private String fact;
@@ -14,11 +13,7 @@ public class Question {
     private String option_no;
     private String answer;
 
-
-
-
     public Question() {
-
 
         id = 0;
         fact = "";
@@ -27,9 +22,7 @@ public class Question {
         option_yes = "";
         answer = "";
 
-
     }
-
     public Question(String Fact, String Question, String Answer, String Option_yes, String Option_no) {
 
         fact = Fact;
@@ -37,7 +30,6 @@ public class Question {
         answer = Answer;
         option_yes = Option_yes;
         option_no = Option_no;
-
 
     }
 
@@ -50,76 +42,47 @@ public class Question {
     }
 
     public int getId() {
-
         return id;
-
     }
 
     public void setId(int id) {
-
         this.id = id;
-
     }
 
-
-
     public String toFact() {
-
         return fact;
     }
 
-    public String toSuck() {
-
-        return QUESTION;
-    }
-
     public String getQuestion() {
-
         return QUESTION;
     }
 
     public String getOption_yes() {
-
         return option_yes;
-
     }
 
     public String getOption_no() {
-
         return option_no;
-
     }
 
     public String getAnswer() {
-
         return answer;
-
     }
 
     public void setQuestion(String question) {
-
         QUESTION = question;
-
     }
 
     public void setOption_yes(String Option_yes) {
-
         option_yes = Option_yes;
-
     }
 
 
     public void setOption_no(String Option_no) {
-
         option_no = Option_no;
-
     }
 
     public void setAnswer(String Answer) {
-
         answer = Answer;
-
     }
 }
-
-

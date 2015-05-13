@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
 
     <ImageView
         android:layout_width="match_parent"
@@ -8,9 +12,9 @@
         android:id="@+id/imageView"
         android:scaleType="fitCenter"
         android:src="@drawable/titlemenu"
-
         android:focusableInTouchMode="false"
-        android:background="#ffc2c2c2" />
+        android:background="#ffc2c2c2"
+        />
 
     <TextView
         android:id="@+id/score2"
@@ -23,7 +27,8 @@
         android:layout_below="@+id/imageView"
         android:layout_above="@+id/btnBck"
         android:textSize="@dimen/abc_action_button_min_width_overflow_material"
-        android:textIsSelectable="true" />
+        android:textIsSelectable="true"
+        />
 
     <Button
         android:id="@+id/btnBck"
