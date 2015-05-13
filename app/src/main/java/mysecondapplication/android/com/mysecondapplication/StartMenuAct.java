@@ -12,7 +12,6 @@ import android.widget.TextView;
 public class StartMenuAct extends FragmentActivity {
     int distraction;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
