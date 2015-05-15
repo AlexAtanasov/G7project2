@@ -2,14 +2,17 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragment_container"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+
+    android:layout_width="fill_parent"
+
+    android:layout_height="fill_parent"
     android:paddingLeft="1dp"
     android:paddingRight="1dp"
     android:paddingTop="1dp"
     android:paddingBottom="1dp"
+
     tools:context="mysecondapplication.android.com.mysecondapplication.StartMenuAct"
-    android:background="#ff0d007e">
+    android:background="#c2221c25">
 
     <ImageView
         android:layout_width="match_parent"
@@ -19,67 +22,47 @@
         android:src="@drawable/titlemenu"
 
         android:focusableInTouchMode="false"
-        android:background="#ffc2c2c2" />
+        android:background="#c259525c"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
-    <GridLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/gridLayout2"
-        android:layout_below="@+id/imageView">
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/green_btn"
+        android:scaleType="center"
+        android:background="#c259525c"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/yellow_btn"
+        android:scaleType="center"
+        android:background="#c259525c"
 
-        <TextView
-            android:id="@+id/displaySpeed"
-            android:layout_width="fill_parent"
-            android:layout_height="176dp"
-            android:layout_row="2"
-            android:layout_column="1"
-            android:textColor="#ffffffff"
-             />
+        android:layout_below="@+id/imageView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible" />
 
-        <GridLayout
-            android:layout_width="fill_parent"
-            android:layout_height="135dp"
-            android:layout_row="0"
-            android:layout_column="1"
-            android:layout_rowSpan="2">
-
-            <Button
-                android:layout_width="fill_parent"
-                android:layout_height="match_parent"
-                android:text="TEXT TO SPEECH"
-                android:id="@+id/button"
-                android:layout_row="0"
-                android:layout_column="1"
-                android:textSize="25dp"
-                android:background="@drawable/custom_btn_arsenic"
-                android:onClick="onClickTextToSpeech"
-                style ="@style/btnStyleArsenic"
-                />
-        </GridLayout>
-
-        <GridLayout
-            android:layout_width="fill_parent"
-            android:layout_height="135dp"
-            android:layout_row="3"
-            android:layout_column="1">
-
-            <Button
-
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:text="TEXT ONLY"
-                android:id="@+id/button2"
-                android:layout_row="4"
-                android:layout_column="1"
-                android:textSize="25dp"
-                android:background="@drawable/custom_btn_genoa"
-                android:textColor="#ffffffff"
-                android:onClick="onClickTextOnly"
-                style ="@style/btnStyleGenoa"
-                android:layout_gravity="left" />
-
-        </GridLayout>
-    </GridLayout>
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/red_btn"
+        android:scaleType="center"
+        android:background="#c259525c"
+        android:visibility="invisible"
+        android:layout_below="@+id/imageView"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_alignStart="@+id/imageView1" />
 </RelativeLayout>
 
