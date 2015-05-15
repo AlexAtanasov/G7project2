@@ -11,7 +11,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:text="@string/Speed"
         android:id="@+id/displaySpeed"
         android:layout_gravity="center_horizontal"
         android:layout_weight="0.06"
