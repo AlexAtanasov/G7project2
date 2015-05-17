@@ -23,6 +23,7 @@ public class Question {
         answer = "";
 
     }
+
     public Question(String Fact, String Question, String Answer, String Option_yes, String Option_no) {
 
         fact = Fact;
@@ -76,7 +77,6 @@ public class Question {
     public void setOption_yes(String Option_yes) {
         option_yes = Option_yes;
     }
-
 
     public void setOption_no(String Option_no) {
         option_no = Option_no;

@@ -8,7 +8,6 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.TextView;
 
-
 public class FocusActivity extends ActionBarActivity {
 
     TxtS ttsp = null;
@@ -21,7 +20,6 @@ public class FocusActivity extends ActionBarActivity {
         ttsp.initialize(this);
 
         Handler h = new Handler();
-
 
         h.postDelayed(new Runnable() {
             @Override

@@ -65,6 +65,7 @@ public class TOActivity extends ActionBarActivity {
     public void onClickNo(View view){
 
         if(currentQ.getAnswer().equals("no")) {
+
             Context context = getApplicationContext();
             CharSequence text = "no";
             int duration = Toast.LENGTH_SHORT;
@@ -75,7 +76,9 @@ public class TOActivity extends ActionBarActivity {
             score++;
 
             toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.START, 370, 95);
+
         } else {
+
             Context context = getApplicationContext();
             CharSequence text = "yes";
             int duration = Toast.LENGTH_SHORT;

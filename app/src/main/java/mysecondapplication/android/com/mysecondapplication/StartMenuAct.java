@@ -11,7 +11,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
 public class StartMenuAct extends FragmentActivity {
     int distraction;
 
@@ -38,8 +37,6 @@ public class StartMenuAct extends FragmentActivity {
         TextView textView2 = (TextView)findViewById(R.id.textView2);
         TextView textView3 = (TextView)findViewById(R.id.textView3);
 
-
-
         //imageViews
         ImageView imageView1 = (ImageView)findViewById(R.id.imageView1);
         ImageView imageView2 = (ImageView)findViewById(R.id.imageView2);
@@ -65,8 +62,6 @@ public class StartMenuAct extends FragmentActivity {
         if(distraction== 2||
                 distraction== 3){
 
-
-
             // ds.setBackgroundColor(0xffffff00);
             imageView2.setVisibility(View.VISIBLE);
             textView2.setVisibility(View.VISIBLE);
@@ -75,7 +70,6 @@ public class StartMenuAct extends FragmentActivity {
             imageView3.setVisibility(View.INVISIBLE);
             textView3.setVisibility(View.INVISIBLE);
 
-
             Handler h = new Handler();
             h.postDelayed(new Runnable() {
                 @Override
@@ -83,8 +77,6 @@ public class StartMenuAct extends FragmentActivity {
                     delayReturn2();
                 }
             }, 5000);
-
-
 
         }
         if(distraction== 4){
@@ -96,8 +88,6 @@ public class StartMenuAct extends FragmentActivity {
             textView1.setVisibility(View.INVISIBLE);
             imageView2.setVisibility(View.INVISIBLE);
             textView2.setVisibility(View.INVISIBLE);
-
-
 
             Handler h = new Handler();
             h.postDelayed(new Runnable() {
@@ -124,14 +114,12 @@ public class StartMenuAct extends FragmentActivity {
         startActivity(intent);
     }
 
-
     public void delayReturn2() {
         String msg = "Moderate Driver Distraction. Press the YELLOW button to play the quiz";
         ttsp.initText(msg);
     }
 
     public void delayReturn3() {
-
         String msg2 = "High Driver Distraction! No game allowed! Please focus on the road!";
         ttsp.initText(msg2);
 
