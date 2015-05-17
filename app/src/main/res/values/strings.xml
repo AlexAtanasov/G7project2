@@ -14,6 +14,7 @@
 
     <string name="title_activity_correct">CorrectActivity</string>
     <string name="title_text_only">TOActivity</string>
+    <string name="title_focus">FocusActivity</string>
     <string name="title_activity_activity_wrong">ActivityWrong</string>
     <string name="title_activity_start_menu">StartMenuAct</string>
     <string name="title_activity_wrong">ActivityWrong</string>
@@ -22,6 +23,13 @@
     <string name="Question">question</string>
     <string name="Fact">fact</string>
     <string name="Score">score</string>
+    <string name="FocusMsg">Really, Focus!! </string>
+
+    <string name="Text1">Low Driver Distraction. Press the GREEN button to play the quiz.</string>
+    <string name="Text2">Moderate Driver Distraction. Press the YELLOW button to play the quiz.</string>
+    <string name="Text3">High Driver Distraction! No game allowed! Please focus on the road!</string>
+
+
 
 
 </resources>
