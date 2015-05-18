@@ -1,6 +1,5 @@
 package mysecondapplication.android.com.mysecondapplication;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -8,9 +7,7 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.TextView;
 
-
 public class ScoreTOActivity extends ActionBarActivity{
-
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +26,6 @@ public class ScoreTOActivity extends ActionBarActivity{
 
             }
         }, 400);
-
 
         new Handler().postDelayed(new Runnable() {
             @Override

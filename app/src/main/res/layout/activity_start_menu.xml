@@ -36,6 +36,7 @@
         android:background="#c259525c"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:onClick="onClickTextOnly"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
         android:visibility="invisible"/>
@@ -47,7 +48,7 @@
         android:src="@drawable/yellow_btn"
         android:scaleType="center"
         android:background="#c259525c"
-
+        android:onClick="onClickTextToSpeech"
         android:layout_below="@+id/imageView"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
@@ -59,10 +60,50 @@
         android:layout_height="250dp"
         android:src="@drawable/red_btn"
         android:scaleType="center"
+        android:onClick="onClickFocus"
         android:background="#c259525c"
         android:visibility="invisible"
         android:layout_below="@+id/imageView"
         android:layout_alignLeft="@+id/imageView1"
         android:layout_alignStart="@+id/imageView1" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#fffcffe3"
+        android:text="@string/Text1"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:layout_below="@+id/imageView1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#fffcffe3"
+        android:text="@string/Text2"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:layout_alignTop="@+id/textView1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#fffcffe3"
+        android:text="@string/Text3"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:layout_below="@+id/imageView1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>
 

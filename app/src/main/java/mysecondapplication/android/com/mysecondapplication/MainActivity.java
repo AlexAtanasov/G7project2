@@ -11,7 +11,6 @@ package mysecondapplication.android.com.mysecondapplication;
         import android.widget.Toast;
         import java.util.List;
 
-
 public class MainActivity extends ActionBarActivity {
     List<Question> questionList;
     int score = 0;
@@ -113,6 +112,7 @@ public class MainActivity extends ActionBarActivity {
             ttsp.initText(cor);
 
         } else {
+
             Context context = getApplicationContext();
             CharSequence text = "yes";
             int duration = Toast.LENGTH_SHORT;
@@ -134,6 +134,7 @@ public class MainActivity extends ActionBarActivity {
             ttsp.addText(currentQuestion.getQuestion());
         }
     }
+
     public void setQuestionView(){
         txtQuestion.setText(currentQuestion.getFact());
         txtQuestion.setText(currentQuestion.getQuestion());

@@ -3,6 +3,7 @@ package mysecondapplication.android.com.mysecondapplication;
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
@@ -10,9 +11,10 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
 public class StartMenuAct extends FragmentActivity {
     int distraction;
+
+    TxtS ttsp = null;
     /*ImageView imageView1;
     ImageView imageView2;
     ImageView imageView3;*/
@@ -27,6 +29,13 @@ public class StartMenuAct extends FragmentActivity {
         fragmentTransaction.add(R.id.fragment_container,agaFragment);
         fragmentTransaction.commit();
         final TextView ds = (TextView) findViewById(R.id.displaySpeed);
+
+        ttsp = new TxtS();
+        ttsp.initialize(this);
+
+        TextView textView1 = (TextView)findViewById(R.id.textView1);
+        TextView textView2 = (TextView)findViewById(R.id.textView2);
+        TextView textView3 = (TextView)findViewById(R.id.textView3);
 
         //imageViews
         ImageView imageView1 = (ImageView)findViewById(R.id.imageView1);
@@ -43,22 +52,50 @@ public class StartMenuAct extends FragmentActivity {
                 distraction== 1 ) {
             //ds.setBackgroundColor(0xff00ff00);
             imageView1.setVisibility(View.VISIBLE);
+            textView1.setVisibility(View.VISIBLE);
             imageView2.setVisibility(View.INVISIBLE);
+            textView2.setVisibility(View.INVISIBLE);
             imageView3.setVisibility(View.INVISIBLE);
+            textView3.setVisibility(View.INVISIBLE);
 
         }
         if(distraction== 2||
                 distraction== 3){
+
             // ds.setBackgroundColor(0xffffff00);
             imageView2.setVisibility(View.VISIBLE);
+            textView2.setVisibility(View.VISIBLE);
             imageView1.setVisibility(View.INVISIBLE);
+            textView1.setVisibility(View.INVISIBLE);
             imageView3.setVisibility(View.INVISIBLE);
+            textView3.setVisibility(View.INVISIBLE);
+
+            Handler h = new Handler();
+            h.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    delayReturn2();
+                }
+            }, 5000);
+
         }
         if(distraction== 4){
+
             // ds.setBackgroundColor(0xffff0000);
             imageView3.setVisibility(View.VISIBLE);
+            textView3.setVisibility(View.VISIBLE);
             imageView1.setVisibility(View.INVISIBLE);
+            textView1.setVisibility(View.INVISIBLE);
             imageView2.setVisibility(View.INVISIBLE);
+            textView2.setVisibility(View.INVISIBLE);
+
+            Handler h = new Handler();
+            h.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    delayReturn3();
+                }
+            }, 5000);
         }
     }
 
@@ -70,5 +107,21 @@ public class StartMenuAct extends FragmentActivity {
     public void onClickTextOnly(View view) {
         Intent intent = new Intent(this, TOActivity.class);
         startActivity(intent);
+    }
+
+    public void onClickFocus(View view) {
+        Intent intent = new Intent(this, FocusActivity.class);
+        startActivity(intent);
+    }
+
+    public void delayReturn2() {
+        String msg = "Moderate Driver Distraction. Press the YELLOW button to play the quiz";
+        ttsp.initText(msg);
+    }
+
+    public void delayReturn3() {
+        String msg2 = "High Driver Distraction! No game allowed! Please focus on the road!";
+        ttsp.initText(msg2);
+
     }
 }

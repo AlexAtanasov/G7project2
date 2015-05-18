@@ -26,8 +26,6 @@ import java.lang.Override;
 import java.lang.Runnable;
 import java.lang.String;
 
-
-
 /**
  * Created by Viktor on 2015-04-24.
  */

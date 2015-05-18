@@ -5,10 +5,6 @@ import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import java.util.Locale;
 
-/**
- * Created by WorkTop on 3/9/2015.
- */
-
 public class TxtS {
     private TextToSpeech TxtSp = null;
     private boolean load = false;
