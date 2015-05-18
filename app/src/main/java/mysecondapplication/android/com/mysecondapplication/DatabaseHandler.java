@@ -11,7 +11,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
-    private static final int DATABASE_VERSION = 6;    //ATT!!! If you made any change into db - increase this int!!!
+    private static final int DATABASE_VERSION = 7;    //ATT!!! If you made any change into db - increase this int!!!
     // Database Name
     private static final String DATABASE_NAME = "QUESTION";
     // tasks table name
@@ -135,7 +135,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         Question id31 = new Question("Did you know that next to Warsaw Chicago has the largest Polish population in the world.", "Is Warsaw the capital of Poland?", "yes", "yes", "no");
         this.insertIntoDb(id31);
 
-        Question id32 = new Question("One of the largest Icelandic geysers, located on the slopes of the volcano Hekla, is called simply Geyser.", "Is Iceland in the EU?", "no", "yes", "no");
+        Question id32 = new Question("One of the largest Icelandic geysers, located on the slopes of the volcano Hekla, is called simply Geyser.", "Is Iceland in the EU?", "no", "yes", "no");
         this.insertIntoDb(id32);
 
         Question id33 = new Question("Did you know that almost to the end of the 1980s there was not a single phone in Bhutan.", "Is Bhutan a country in Africa?", "no", "yes", "no");
