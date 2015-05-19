@@ -46,7 +46,7 @@ public class StartMenuAct extends FragmentActivity {
         if(b != null) {
             distraction = b.getInt("Distraction");
         }
-        //Log.d("blah", String.valueOf(distraction));
+        Log.d("blah", String.valueOf(distraction));
 
         if(distraction == 0 ||
                 distraction== 1 ) {
@@ -76,7 +76,7 @@ public class StartMenuAct extends FragmentActivity {
                 public void run() {
                     delayReturn2();
                 }
-            }, 5000);
+            }, 3000);
 
         }
         if(distraction== 4){
@@ -95,7 +95,7 @@ public class StartMenuAct extends FragmentActivity {
                 public void run() {
                     delayReturn3();
                 }
-            }, 5000);
+            }, 3000);
         }
     }
 

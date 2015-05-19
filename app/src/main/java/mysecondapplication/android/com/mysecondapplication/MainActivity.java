@@ -18,6 +18,7 @@ public class MainActivity extends ActionBarActivity {
     Question currentQuestion;
     TextView txtQuestion;
     TxtS ttsp = null;
+    VoiceRecognition vc;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +44,7 @@ public class MainActivity extends ActionBarActivity {
 
                 ttsp.addText(currentQuestion.toFact());
                 ttsp.addText(currentQuestion.getQuestion());
+
             }
         }, 400);
     }
@@ -73,6 +75,7 @@ public class MainActivity extends ActionBarActivity {
         if(questionID < 11) {
             ttsp.addText(currentQuestion.toFact());
             ttsp.addText(currentQuestion.getQuestion());
+
         }
     }
 
