@@ -51,16 +51,10 @@ public class MainActivity extends ActionBarActivity {
 
        if(currentQuestion.getAnswer().equals("yes")) {
 
+            score++;
             Context context = getApplicationContext();
             CharSequence text = "yes";
             int duration = Toast.LENGTH_SHORT;
-
-            Toast toast;
-            toast = Toast.makeText(context,"Correct!", Toast.LENGTH_SHORT);
-            toast.show();
-            score++;
-
-            toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.START, 370, 95);
 
             String cor = "Correct!";
             ttsp.initText(cor);
@@ -69,12 +63,6 @@ public class MainActivity extends ActionBarActivity {
             Context context = getApplicationContext();
             CharSequence text = "yes";
             int duration = Toast.LENGTH_SHORT;
-
-            Toast toast;
-            toast = Toast.makeText(context,"Incorrect!", Toast.LENGTH_SHORT);
-            toast.show();
-
-            toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.START, 370, 95);
 
             String wro = "Incorrect!";
             ttsp.initText(wro);
@@ -97,16 +85,10 @@ public class MainActivity extends ActionBarActivity {
 
         if(currentQuestion.getAnswer().equals("no")) {
 
+            score++;
             Context context = getApplicationContext();
             CharSequence text = "no";
             int duration = Toast.LENGTH_SHORT;
-
-            Toast toast;
-            toast = Toast.makeText(context,"Correct!", Toast.LENGTH_SHORT);
-            toast.show();
-            score++;
-
-            toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.START, 370, 95);
 
             String cor = "Correct!";
             ttsp.initText(cor);
@@ -116,12 +98,6 @@ public class MainActivity extends ActionBarActivity {
             Context context = getApplicationContext();
             CharSequence text = "yes";
             int duration = Toast.LENGTH_SHORT;
-
-            Toast toast;
-            toast = Toast.makeText(context,"Incorrect!", Toast.LENGTH_SHORT);
-            toast.show();
-
-            toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.START, 370, 95);
 
             String wro = "Incorrect!";
             ttsp.initText(wro);

@@ -11,7 +11,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
-    private static final int DATABASE_VERSION = 7;    //ATT!!! If you made any change into db - increase this int!!!
+    private static final int DATABASE_VERSION = 8;    //ATT!!! If you made any change into db - increase this int!!! nr8 entered 19.05. at 12:12
     // Database Name
     private static final String DATABASE_NAME = "QUESTION";
     // tasks table name
