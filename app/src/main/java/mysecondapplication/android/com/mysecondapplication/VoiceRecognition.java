@@ -17,6 +17,7 @@ public class VoiceRecognition extends Activity {
     int REQUEST_OK = 1;
     Question currentQuestion;
     TxtS ttsp = null;
+    StartMenuAct sma;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,14 +40,8 @@ public class VoiceRecognition extends Activity {
         if (requestCode == REQUEST_OK && resultCode == RESULT_OK) {
             ArrayList<String> thingsYouSaid = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
 
-            if (thingsYouSaid.get(0) == currentQuestion.getAnswer()) {
+            if (thingsYouSaid.get(0) == "Yes") {
 
-            }
-            else if(thingsYouSaid.get(0) == "Repeat"){
-                ttsp.addText(currentQuestion.getQuestion());
-            }
-            else{
-                ttsp.addText("Unable to recognise");
             }
         }
     }

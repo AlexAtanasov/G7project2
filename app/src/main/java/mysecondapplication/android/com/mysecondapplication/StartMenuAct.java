@@ -1,5 +1,7 @@
 package mysecondapplication.android.com.mysecondapplication;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
@@ -15,6 +17,7 @@ import android.widget.TextView;
 public class StartMenuAct extends FragmentActivity {
     int distraction;
     boolean attention = false;
+    VoiceRecognition vc;
 
     TxtS ttsp = null;
     /*ImageView imageView1;
@@ -28,32 +31,32 @@ public class StartMenuAct extends FragmentActivity {
         android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
         android.support.v4.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         AgaFragment agaFragment = new AgaFragment();
-        fragmentTransaction.add(R.id.fragment_container,agaFragment);
+        fragmentTransaction.add(R.id.fragment_container, agaFragment);
         fragmentTransaction.commit();
         final TextView ds = (TextView) findViewById(R.id.displaySpeed);
 
         ttsp = new TxtS();
         ttsp.initialize(this);
 
-        TextView textView1 = (TextView)findViewById(R.id.textView1);
-        TextView textView2 = (TextView)findViewById(R.id.textView2);
-        TextView textView3 = (TextView)findViewById(R.id.textView3);
+        TextView textView1 = (TextView) findViewById(R.id.textView1);
+        TextView textView2 = (TextView) findViewById(R.id.textView2);
+        TextView textView3 = (TextView) findViewById(R.id.textView3);
 
         //imageViews
-        ImageView imageView1 = (ImageView)findViewById(R.id.imageView1);
-        ImageView imageView2 = (ImageView)findViewById(R.id.imageView2);
-        ImageView imageView3 = (ImageView)findViewById(R.id.imageView3);
+        ImageView imageView1 = (ImageView) findViewById(R.id.imageView1);
+        ImageView imageView2 = (ImageView) findViewById(R.id.imageView2);
+        ImageView imageView3 = (ImageView) findViewById(R.id.imageView3);
 
 
         Bundle b = getIntent().getExtras();
         if (b != null) {
-           distraction = b.getInt("Distraction");
+            distraction = b.getInt("Distraction");
         }
 
         //Log.d("blah", String.valueOf(distraction));
 
-        if(distraction == 0 ||
-                distraction== 1 ) {
+        if (distraction == 0 ||
+                distraction == 1) {
             //ds.setBackgroundColor(0xff00ff00);
             imageView1.setVisibility(View.VISIBLE);
             textView1.setVisibility(View.VISIBLE);
@@ -63,10 +66,10 @@ public class StartMenuAct extends FragmentActivity {
             textView3.setVisibility(View.INVISIBLE);
 
         }
-        if(distraction == 1) attention = true;
 
-        if(distraction== 2||
-                distraction== 3){
+
+        if (distraction == 2 ||
+                distraction == 3) {
 
             // ds.setBackgroundColor(0xffffff00);
             imageView2.setVisibility(View.VISIBLE);
@@ -85,6 +88,21 @@ public class StartMenuAct extends FragmentActivity {
             }, 3000);
 
         }
+        if (distraction == 2) {
+            attention = true;
+
+            if (attention) {
+                Handler h = new Handler();
+                h.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        delayReturn4();
+                    }
+                }, 25000);
+
+            }
+        }
+
         if(distraction== 4){
 
             // ds.setBackgroundColor(0xffff0000);
@@ -102,9 +120,6 @@ public class StartMenuAct extends FragmentActivity {
                     delayReturn3();
                 }
             }, 3000);
-        }
-        if (attention){
-            
         }
 
     }
@@ -127,11 +142,18 @@ public class StartMenuAct extends FragmentActivity {
     public void delayReturn2() {
         String msg = "Moderate Driver Distraction. Press the YELLOW button to play the quiz";
         ttsp.initText(msg);
+
     }
 
     public void delayReturn3() {
         String msg2 = "High Driver Distraction! No game allowed! Please focus on the road!";
         ttsp.initText(msg2);
+
+    }
+
+    public void delayReturn4() {
+        String msg3 = "You seem to be a little bored, would you like the play the quiz?";
+        ttsp.initText(msg3);
 
     }
 }
