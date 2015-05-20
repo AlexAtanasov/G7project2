@@ -30,10 +30,16 @@ public class FocusActivity extends ActionBarActivity {
 
             }
         }, 400);
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                onClickBack();
+            }
+        }, 5000);
     }
 
-    public void onClickBack(View view) {
-        Intent intent = new Intent(this, StartMenuAct.class);
-        startActivity(intent);
+    public void onClickBack() {
+        this.finish();
     }
 }

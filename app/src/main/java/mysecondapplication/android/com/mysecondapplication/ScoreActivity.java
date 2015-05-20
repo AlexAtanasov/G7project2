@@ -43,12 +43,10 @@ public class ScoreActivity extends ActionBarActivity{
     }
 
     public void onClickBack(View view) {
-        Intent intent = new Intent(this, StartMenuAct.class);
-        startActivity(intent);
+        this.finish();
     }
 
     public void delayReturn() {
-        Intent intent = new Intent(this, StartMenuAct.class);
-        startActivity(intent);
+        this.finish();
     }
 }

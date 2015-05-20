@@ -127,6 +127,7 @@ public class MainActivity extends ActionBarActivity {
             b.putInt("score", score);
             intent.putExtras(b);
             startActivity(intent);
+            this.finish();
         }
     }
 }

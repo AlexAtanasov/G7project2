@@ -3,6 +3,7 @@ package mysecondapplication.android.com.mysecondapplication;
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 
 public class StartMenuAct extends FragmentActivity {
     int distraction;
+    boolean attention = false;
 
     TxtS ttsp = null;
     /*ImageView imageView1;
@@ -42,11 +44,13 @@ public class StartMenuAct extends FragmentActivity {
         ImageView imageView2 = (ImageView)findViewById(R.id.imageView2);
         ImageView imageView3 = (ImageView)findViewById(R.id.imageView3);
 
+
         Bundle b = getIntent().getExtras();
-        if(b != null) {
-            distraction = b.getInt("Distraction");
+        if (b != null) {
+           distraction = b.getInt("Distraction");
         }
-        Log.d("blah", String.valueOf(distraction));
+
+        //Log.d("blah", String.valueOf(distraction));
 
         if(distraction == 0 ||
                 distraction== 1 ) {
@@ -59,6 +63,8 @@ public class StartMenuAct extends FragmentActivity {
             textView3.setVisibility(View.INVISIBLE);
 
         }
+        if(distraction == 1) attention = true;
+
         if(distraction== 2||
                 distraction== 3){
 
@@ -97,6 +103,10 @@ public class StartMenuAct extends FragmentActivity {
                 }
             }, 3000);
         }
+        if (attention){
+            
+        }
+
     }
 
     public void onClickTextToSpeech (View view) {
