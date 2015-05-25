@@ -54,7 +54,7 @@ public class StartMenuAct extends FragmentActivity {
         
         if (distraction == 0 ||
                 distraction == 1) {
-            
+
             imageView1.setVisibility(View.VISIBLE);
             textView1.setVisibility(View.VISIBLE);
             imageView2.setVisibility(View.INVISIBLE);
@@ -130,8 +130,17 @@ public class StartMenuAct extends FragmentActivity {
     }
 
     public void onClickFocus(View view) {
-        Intent intent = new Intent(this, FocusActivity.class);
-        startActivity(intent);
+        Handler h = new Handler();
+
+        h.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                String msg = "Really! Focus on the road!!!";
+                ttsp.initText(msg);
+
+            }
+        }, 400);
     }
 
     public void delayReturn2() {

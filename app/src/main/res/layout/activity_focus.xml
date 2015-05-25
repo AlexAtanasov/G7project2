@@ -3,19 +3,4 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
 
 
-
-    <Button
-        android:id="@+id/btnBck"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="40sp"
-        android:text="@string/FocusMsg"
-        android:height="660dp"
-        android:background="@drawable/custom_back"
-        android:onClick="onClickBack"
-        android:layout_alignParentBottom="true"
-        style="@style/btnBack"
-        />
-
-
 </RelativeLayout>
