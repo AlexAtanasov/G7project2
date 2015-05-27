@@ -44,8 +44,8 @@ public class ScoreActivity extends ActionBarActivity{
 
     public void onClickBack(View view) {
         this.finish();
-    }
-//"Back" button to come back to StartMenuAct Activity
+    }//"Back" button to come back to StartMenuAct Activity
+
     public void delayReturn() {
         this.finish();
     }
