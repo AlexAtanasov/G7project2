@@ -12,33 +12,35 @@ import java.util.List;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 8;    //ATT!!! If you made any change into db - increase this int!!! nr8 entered 19.05. at 12:12
-    // Database Name
-    private static final String DATABASE_NAME = "QUESTION";
-    private static final String TABLE_QUEST = "quest";
-    private static final String KEY_ID = "id";
-    private static final String KEY_FACT = "fact";
-    private static final String KEY_QUES = "question";
-    private static final String KEY_ANSWER = "answer"; 
-    private static final String KEY_OPTA= "opta"; 
-    private static final String KEY_OPTB= "optb"; 
+    
+    private static final String DATABASE_NAME = "QUESTION"; // Database Name
+    private static final String TABLE_QUEST = "quest"; // Table from the database which will be later going to be build in frame
+    private static final String KEY_ID = "id";   //number of entry
+    private static final String KEY_FACT = "fact";  // fun fact about the question
+    private static final String KEY_QUES = "question";  // yes-or-no question
+    private static final String KEY_ANSWER = "answer";  
+    private static final String KEY_OPTA= "opta"; //yes
+    private static final String KEY_OPTB= "optb"; //no
 
     private SQLiteDatabase dbase;
 
     public DatabaseHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
+    //creates a constuctor which takes name and version into considiration
     @Override
     public void onCreate(SQLiteDatabase db) {
         dbase=db;
         String sql = "CREATE TABLE IF NOT EXISTS " + TABLE_QUEST + " ( "
                 + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +KEY_FACT + " TEXT, " +KEY_QUES
                 + " TEXT, " +KEY_ANSWER + " TEXT, "+KEY_OPTA +" TEXT, "
-                +KEY_OPTB +" TEXT)";
+                +KEY_OPTB +" TEXT)";  //builds the table with variables
         db.execSQL(sql);
-        addQuestions();
+        addQuestions();  //performs void
     }
 
-    private void addQuestions() {
+    private void addQuestions() {   
+        //enters question inside the oncreate table
 
         Question id1 = new Question("Did you know that Poland is the ninth largest country in Europe.", "Is Krakow the capital of Poland?", "no", "yes", "no");
         this.insertIntoDb(id1);
@@ -171,17 +173,19 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
   }
 
-    public void onUpgrade(SQLiteDatabase db, int oldV, int newV) {
-        // Drop older table if existed
+    public void onUpgrade(SQLiteDatabase db, int oldV, int newV) {  
+        // if database version was changed
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_QUEST);
         // Create tables again
         onCreate(db);
     }
     // Adding new question
     public void insertIntoDb(Question quest) {
-        //SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put(KEY_FACT, quest.getFact());
+        
+        // void for putting questions into database
+        
+        ContentValues values = new ContentValues();   //builds a values container which will be later used to insert values into db
+        values.put(KEY_FACT, quest.getFact());      // reaches fact from database and puts in key_fact
         values.put(KEY_QUES, quest.getQuestion());
         values.put(KEY_ANSWER, quest.getAnswer());
         values.put(KEY_OPTA, quest.getOption_yes());
@@ -218,7 +222,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         return quesList;
     }
-    public int rowcount(){
+    public int rowcount(){                                             //to check if table was done correctly
         int row=0;
         String selectQuery = "SELECT * FROM " + TABLE_QUEST;
         SQLiteDatabase db = this.getWritableDatabase();
