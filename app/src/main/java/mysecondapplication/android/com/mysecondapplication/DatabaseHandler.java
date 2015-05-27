@@ -14,15 +14,13 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 8;    //ATT!!! If you made any change into db - increase this int!!! nr8 entered 19.05. at 12:12
     // Database Name
     private static final String DATABASE_NAME = "QUESTION";
-    // tasks table name
     private static final String TABLE_QUEST = "quest";
-    // tasks Table Columns names
     private static final String KEY_ID = "id";
     private static final String KEY_FACT = "fact";
     private static final String KEY_QUES = "question";
-    private static final String KEY_ANSWER = "answer"; //correct option
-    private static final String KEY_OPTA= "opta"; //option a
-    private static final String KEY_OPTB= "optb"; //option b
+    private static final String KEY_ANSWER = "answer"; 
+    private static final String KEY_OPTA= "opta"; 
+    private static final String KEY_OPTB= "optb"; 
 
     private SQLiteDatabase dbase;
 
