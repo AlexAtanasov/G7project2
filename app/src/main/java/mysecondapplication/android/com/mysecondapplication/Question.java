@@ -4,7 +4,7 @@ package mysecondapplication.android.com.mysecondapplication;
 /**
  * Created by ilya on 23/04/2015.
  */
-public class Question {
+public class Question {                         // a constructor to store the info for the questions in db
 
     private int id;
     private String QUESTION;
@@ -13,7 +13,7 @@ public class Question {
     private String option_no;
     private String answer;
 
-    public Question() {
+    public Question() {                          //constructor which empties question at the start
 
         id = 0;
         fact = "";
@@ -34,7 +34,10 @@ public class Question {
 
     }
 
-    public String getFact() {
+//getters and setters below
+
+
+    public String getFact() {              
         return fact;
     }
 
