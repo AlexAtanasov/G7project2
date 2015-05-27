@@ -32,10 +32,10 @@ public class StartMenuAct extends FragmentActivity {
         fragmentTransaction.add(R.id.fragment_container, agaFragment);
         fragmentTransaction.commit();
         final TextView ds = (TextView) findViewById(R.id.displaySpeed);
-
+        //Connection AgaFragment to StartMenuAct Activity
         ttsp = new TxtS();
         ttsp.initialize(this);
-
+        //Text to Speech initialization
         TextView textView1 = (TextView) findViewById(R.id.textView1);
         TextView textView2 = (TextView) findViewById(R.id.textView2);
         TextView textView3 = (TextView) findViewById(R.id.textView3);
@@ -61,7 +61,7 @@ public class StartMenuAct extends FragmentActivity {
             textView2.setVisibility(View.INVISIBLE);
             imageView3.setVisibility(View.INVISIBLE);
             textView3.setVisibility(View.INVISIBLE);
-
+            //If driver distraction level is from 0 to 1 the Green button and the statement "Low driver distraction..." will be displayed 
         }
 
 
@@ -74,7 +74,7 @@ public class StartMenuAct extends FragmentActivity {
             textView1.setVisibility(View.INVISIBLE);
             imageView3.setVisibility(View.INVISIBLE);
             textView3.setVisibility(View.INVISIBLE);
-
+            //If driver distraction level is from 2 to 3 the Yellow button and the statement "Moderate Driver Distraction...." will be displayed 
             Handler h = new Handler();
             h.postDelayed(new Runnable() {
                 @Override
@@ -98,7 +98,7 @@ public class StartMenuAct extends FragmentActivity {
 
             }
         }
-
+        //If driver distraction level is 2 after 25 sec you will hear a notification offering you to play the quiz
         if(distraction== 4){
 
             imageView3.setVisibility(View.VISIBLE);
@@ -107,7 +107,7 @@ public class StartMenuAct extends FragmentActivity {
             textView1.setVisibility(View.INVISIBLE);
             imageView2.setVisibility(View.INVISIBLE);
             textView2.setVisibility(View.INVISIBLE);
-
+            //If driver distraction level is 4 the Red button and the statement "High Driver Distraction!..." will be displayed 
             Handler h = new Handler();
             h.postDelayed(new Runnable() {
                 @Override
@@ -115,19 +115,19 @@ public class StartMenuAct extends FragmentActivity {
                     delayReturn3();
                 }
             }, 3000);
-        }
+        }//If driver distraction is 4 after 3 sec you will hear the warning that your distraction level is too high for playing the quiz now
 
     }
 
     public void onClickTextToSpeech (View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
-    }
+    }//If you click the Yellow button the quiz will start Text to speech part 
 
     public void onClickTextOnly(View view) {
         Intent intent = new Intent(this, TOActivity.class);
         startActivity(intent);
-    }
+    }//If you click the Green button the quiz will start Text part 
 
     public void onClickFocus(View view) {
         Handler h = new Handler();
@@ -160,4 +160,4 @@ public class StartMenuAct extends FragmentActivity {
         ttsp.initText(msg3);
 
     }
-}
+} //Text to speech notifications
