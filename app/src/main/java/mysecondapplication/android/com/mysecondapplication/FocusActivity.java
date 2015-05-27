@@ -27,10 +27,10 @@ public class FocusActivity extends ActionBarActivity {
 
                 String msg = "Really! Focus on the road!!!";
                 ttsp.initText(msg);
-                //Text to speech which is activated when the red button pressed
+              
 
             }
-        }, 400);
+        }, 400);  //Text to speech which is activated after 4 msec when the Red button is pressed 
 
         new Handler().postDelayed(new Runnable() {
             @Override
