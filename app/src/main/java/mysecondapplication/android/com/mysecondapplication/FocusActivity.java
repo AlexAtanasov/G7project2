@@ -27,6 +27,7 @@ public class FocusActivity extends ActionBarActivity {
 
                 String msg = "Really! Focus on the road!!!";
                 ttsp.initText(msg);
+                //Text to speech which is activated when the red button pressed
 
             }
         }, 400);
