@@ -4,7 +4,7 @@ import android.content.Context;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import java.util.Locale;
-
+//This class represents integration of the Text to speech for the application
 public class TxtS {
     private TextToSpeech TxtSp = null;
     private boolean load = false;
