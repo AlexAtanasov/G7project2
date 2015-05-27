@@ -42,9 +42,9 @@ public class TOActivity extends ActionBarActivity {
             toast = Toast.makeText(context,"Correct!", Toast.LENGTH_SHORT);
             toast.show();
             score++;
-
+            
             toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.START, 370, 95);
-
+            //Pop up "Correct" if Yes answer is correct
         } else {
             Context context = getApplicationContext();
             CharSequence text = "yes";
@@ -53,9 +53,9 @@ public class TOActivity extends ActionBarActivity {
             Toast toast;
             toast = Toast.makeText(context,"Incorrect!", Toast.LENGTH_SHORT);
             toast.show();
-
+            
             toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.START, 370, 95);
-        }
+        }//Pop up "Incorrect" if Yes answer is incorrect
         if(qid<11) {
             currentQ = quesList.get(qid);
             setQuestionView();
@@ -88,11 +88,11 @@ public class TOActivity extends ActionBarActivity {
             toast.show();
 
             toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.START, 370, 95);
-        }
+        } //The same for No answer
         currentQ = quesList.get(qid);
         if(qid<11) {
             setQuestionView();
-        }
+        }//The number of questions to be asked is 10
     }
 
     public void setQuestionView(){
@@ -105,6 +105,6 @@ public class TOActivity extends ActionBarActivity {
             b.putInt("score", score);
             intent.putExtras(b);
             startActivity(intent);
-        }
+        }//When you reach the question limit you will go to ScoreActivity
     }
 }
