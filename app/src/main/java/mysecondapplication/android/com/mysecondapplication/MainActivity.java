@@ -26,7 +26,7 @@ public class MainActivity extends ActionBarActivity {
 
         ttsp = new TxtS();
         ttsp.initialize(this);
-
+//Initialization to Text to speech
         Handler h = new Handler();
 
         DatabaseHandler db = new DatabaseHandler(this);
@@ -35,7 +35,7 @@ public class MainActivity extends ActionBarActivity {
 
         txtQuestion=(TextView)findViewById(R.id.questionFact);
         txtQuestion=(TextView)findViewById(R.id.questionText);
-
+//Database connection
         setQuestionView();
 
         h.postDelayed(new Runnable() {
@@ -57,35 +57,34 @@ public class MainActivity extends ActionBarActivity {
             Context context = getApplicationContext();
             CharSequence text = "yes";
             int duration = Toast.LENGTH_SHORT;
-
+        //Pop up "Correct" if Yes is correct answer
             String cor = "Correct!";
             ttsp.initText(cor);
-
+        //Text to speech if Yes is correct answer
         } else {
             Context context = getApplicationContext();
             CharSequence text = "yes";
             int duration = Toast.LENGTH_SHORT;
-
+        //Pop up "Incorrect" if "Yes is incorrect answer"
             String wro = "Incorrect!";
             ttsp.initText(wro);
-        }
+        }//Text to speach if "Yes" is incorrect answer 
 
         currentQuestion = questionList.get(questionID);
         setQuestionView();
         if(questionID < 11) {
             ttsp.addText(currentQuestion.toFact());
             ttsp.addText(currentQuestion.getQuestion());
-
+        //If the number of questions is less then 10 you will still get a new question
         }
     }
 
     public void onClickRepeat(View view) {
-        //ttsp.addText(currentQ.toFact());
         ttsp.addText(currentQuestion.getQuestion());
     }
 
     public void onClickNo(View view){
-
+    //The same for "No" button
         if(currentQuestion.getAnswer().equals("no")) {
 
             score++;
@@ -117,11 +116,11 @@ public class MainActivity extends ActionBarActivity {
     public void setQuestionView(){
         txtQuestion.setText(currentQuestion.getFact());
         txtQuestion.setText(currentQuestion.getQuestion());
-
+    //Connection between database and Activity
         questionID++;
 
         if (questionID == 11) {
-
+        //The number of questions per game, when it is reached you get your score
             Intent intent = new Intent(this, ScoreActivity.class);
             Bundle b = new Bundle();
             b.putInt("score", score);
