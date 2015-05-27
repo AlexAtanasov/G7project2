@@ -26,7 +26,7 @@ public class MainActivity extends ActionBarActivity {
 
         ttsp = new TxtS();
         ttsp.initialize(this);
-//Initialization to Text to speech
+        //Initialization to Text to speech
         Handler h = new Handler();
 
         DatabaseHandler db = new DatabaseHandler(this);
@@ -35,7 +35,7 @@ public class MainActivity extends ActionBarActivity {
 
         txtQuestion=(TextView)findViewById(R.id.questionFact);
         txtQuestion=(TextView)findViewById(R.id.questionText);
-//Database connection
+        //Database connection
         setQuestionView();
 
         h.postDelayed(new Runnable() {
@@ -75,8 +75,8 @@ public class MainActivity extends ActionBarActivity {
         if(questionID < 11) {
             ttsp.addText(currentQuestion.toFact());
             ttsp.addText(currentQuestion.getQuestion());
-        //If the number of questions is less then 10 you will still get a new question
-        }
+        
+        }//If the number of questions is less then 10 you will still get a new question
     }
 
     public void onClickRepeat(View view) {
@@ -116,17 +116,17 @@ public class MainActivity extends ActionBarActivity {
     public void setQuestionView(){
         txtQuestion.setText(currentQuestion.getFact());
         txtQuestion.setText(currentQuestion.getQuestion());
-    //Connection between database and Activity
+        //Connection between database and Activity
         questionID++;
 
         if (questionID == 11) {
-        //The number of questions per game, when it is reached you get your score
+        
             Intent intent = new Intent(this, ScoreActivity.class);
             Bundle b = new Bundle();
             b.putInt("score", score);
             intent.putExtras(b);
             startActivity(intent);
             this.finish();
-        }
+        }//The number of questions per game, when it is reached you get your score
     }
 }
