@@ -19,7 +19,7 @@ public class ScoreTOActivity extends ActionBarActivity{
 
         TextView t = (TextView) findViewById(R.id.score2);
         t.setText("From 10 questions you answered " + String.valueOf(score) + " correctly");
-
+        //Displaying score on the screen
         h.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -38,7 +38,7 @@ public class ScoreTOActivity extends ActionBarActivity{
     public void onClickBack(View view) {
         Intent intent = new Intent(this, StartMenuAct.class);
         startActivity(intent);
-    }
+    }//"Back" button to come back to StartMenuAct Activity
 
     public void delayReturn() {
         Intent intent = new Intent(this, StartMenuAct.class);
